@@ -1,0 +1,52 @@
+{
+  "name": "▓▓▓▓▓▓",
+  "version": "0.1.0",
+  "description": "▓▓▓▓▓▓",
+  "private": true,
+  "homepage": "https://thnlsn.github.io/▓▓▓▓▓▓/",
+  "dependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.5.0",
+    "@testing-library/user-event": "^7.2.1",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
+    "react-scripts": "3.4.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.0.1",
+    "concat": "^1.0.3",
+    "gh-pages": "^3.1.0",
+    "node-sass": "^4.14.1",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.1.4",
+    "postcss-cli": "^8.1.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "dev": "npm-run-all -p -r start watch:sass",
+    "watch:sass": "node-sass src/sass/main.scss src/css/style.css -w",
+    "compile:sass": "node-sass src/sass/main.scss src/css/style.comp.css",
+    "prefix:css": "postcss ./src/css/style.comp.css --use autoprefixer -o ./src/css/style.prefix.css",
+    "compress:css": "node-sass ./src/css/style.prefix.css ./src/css/style.css --output-style compressed",
+    "build:css": "npm-run-all compile:sass prefix:css compress:css",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": "last 10 versions",
+  "production": [
+    ">0.2%",
+    "not dead",
+    "not op_mini all"
+  ],
+  "development": [
+    "last 1 chrome version",
+    "last 1 firefox version",
+    "last 1 safari version"
+  ]
+}
