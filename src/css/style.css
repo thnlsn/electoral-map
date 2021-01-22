@@ -19,7 +19,17 @@ html {
   justify-items: center;
   height: 100vh; }
 
+.map-container {
+  height: 80%;
+  width: 80%; }
+
 .map {
   fill: #f9f9f9;
   stroke: #9e9ea0;
   stroke-linejoin: round; }
+  .map__state {
+    stroke-width: 0.971px;
+    transition: all 0.1s;
+    position: relative; }
+    .map__state:hover {
+      fill: #9e9ea0; }

@@ -2,4 +2,16 @@
   fill: $color-grey-light;
   stroke: $color-grey;
   stroke-linejoin: round;
+
+  &__state {
+    stroke-width: 0.971px;
+
+    transition: all 0.1s;
+
+    position: relative;
+
+    &:hover {
+      fill: $color-grey;
+    }
+  }
 }
