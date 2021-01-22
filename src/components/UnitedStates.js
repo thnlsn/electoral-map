@@ -1,6 +1,6 @@
 import React from 'react';
 
-function UnitedStates({ states }) {
+function UnitedStates({ states, handleClick }) {
   return (
     <svg
       className='map-container'
@@ -16,6 +16,8 @@ function UnitedStates({ states }) {
             className='map__state'
             id={`${state.name}`}
             d={state.path}
+            onClick={handleClick}
+            data-points={state.points}
             key={index}
           ></path>
         ))}
