@@ -1,1 +1,25 @@
+:root {
+  --color-white: #fff;
+  --color-black: #000; }
 
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+.App {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  height: 100vh; }
+
+.map {
+  fill: #f9f9f9;
+  stroke: #9e9ea0;
+  stroke-linejoin: round; }
