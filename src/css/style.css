@@ -2,6 +2,9 @@
   --color-white: #fff;
   --color-black: #000; }
 
+#district-of-columbia {
+  stroke-width: 0.5px !important; }
+
 html {
   box-sizing: border-box;
   font-size: 62.5%; }
@@ -20,8 +23,8 @@ html {
   height: 100vh; }
 
 .map-container {
-  height: 80%;
-  width: 80%; }
+  height: 90%;
+  width: 90%; }
 
 .map {
   fill: #f9f9f9;
