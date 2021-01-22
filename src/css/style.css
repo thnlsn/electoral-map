@@ -5,6 +5,15 @@
 #district-of-columbia {
   stroke-width: 0.5px !important; }
 
+.none {
+  fill: #f9f9f9; }
+
+.blue {
+  fill: #282cfa; }
+
+.red {
+  fill: #ad2149; }
+
 html {
   box-sizing: border-box;
   font-size: 62.5%; }
@@ -37,12 +46,12 @@ html {
     background-color: #ad2149; }
 
 .map {
-  fill: #f9f9f9;
   stroke: #9e9ea0;
   stroke-linejoin: round; }
   .map__state {
     stroke-width: 0.971px;
     transition: all 0.1s;
-    position: relative; }
+    position: relative;
+    cursor: pointer; }
     .map__state:hover {
-      fill: #9e9ea0; }
+      filter: brightness(0.4); }

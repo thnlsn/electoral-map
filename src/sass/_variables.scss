@@ -19,3 +19,13 @@ $header-font: 'Playfair Display', serif;
 #district-of-columbia {
   stroke-width: 0.5px !important;
 }
+
+.none {
+  fill: $color-grey-light;
+}
+.blue {
+  fill: #282cfa;
+}
+.red {
+  fill: $color-rep;
+}

@@ -1,29 +1,54 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './css/style.css';
 
 import Bar from './components/PointBar';
+import Settings from './components/Settings';
 import Map from './components/UnitedStates';
 
 import states from './states';
 
 function App() {
-  const [blue, setBlue] = useState(0);
-  const [none, setNone] = useState(538);
-  const [red, setRed] = useState(0);
+  const [bluePts, setBluePts] = useState(0);
+  const [nonePts, setNonePts] = useState(538);
+  const [redPts, setRedPts] = useState(0);
 
-  const [party, setParty] = useState('none');
+  const [blueStates, setBlueStates] = useState([8]);
+  const [noneStates, setNoneStates] = useState([]);
+  const [redStates, setRedStates] = useState([]);
+
+  const [party, setParty] = useState('blue');
+
+  const handleChangeParty = (e) => {
+    const selectedParty = e.target.textContent.toLowerCase();
+    console.log(selectedParty);
+    setParty(selectedParty);
+  };
 
   const logData = (e) => {
     let data = e.target.id;
     let points = e.target.dataset.points;
+    let key = Number(e.target.dataset.key);
     console.log(data);
     console.log(points);
+    console.log(key);
+
+    console.log(blueStates.includes(key));
   };
+
+  useEffect(() => {
+    console.log('rerender');
+  }, []);
 
   return (
     <main className='App'>
-      <Bar blue={blue} red={red} none={none} />
-      <Map states={states} handleClick={logData} />
+      <Bar bluePts={bluePts} redPts={redPts} nonePts={nonePts} />
+      <Settings handleChangeParty={handleChangeParty} />
+      <Map
+        states={states}
+        handleClick={logData}
+        blueStates={blueStates}
+        redStates={redStates}
+      />
     </main>
   );
 }
