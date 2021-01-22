@@ -16,6 +16,25 @@
   }
 }
 
+.settings {
+  &__btn {
+    cursor: pointer;
+    padding: 1rem;
+    background-color: $color-grey;
+    text-align: center;
+    border-radius: 2px;
+
+    &--blue {
+      background-color: $color-dem;
+      color: $color-grey-light;
+    }
+    &--red {
+      background-color: $color-rep;
+      color: $color-grey-light;
+    }
+  }
+}
+
 .map {
   stroke: $color-grey;
   stroke-linejoin: round;

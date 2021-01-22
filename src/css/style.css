@@ -25,14 +25,22 @@ html {
   padding: 0;
   box-sizing: inherit; }
 
+body {
+  font-size: 2.4rem; }
+
 .App {
   display: grid;
-  grid-template-columns: [full-start settings-start] 1fr [settings-end map-start] 4fr [map-end full-end];
+  grid-template-columns: [full-start settings-start] 1fr [settings-end map-start] 5fr [map-end full-end];
   grid-template-rows: min-content;
   height: 100vh; }
 
 .bar {
   grid-column: full-start / full-end; }
+
+.settings {
+  display: grid;
+  justify-content: center;
+  align-items: center; }
 
 .map-container {
   height: 100%;
@@ -48,6 +56,19 @@ html {
     background-color: #282cfa; }
   .bar__red {
     background-color: #ad2149; }
+
+.settings__btn {
+  cursor: pointer;
+  padding: 1rem;
+  background-color: #9e9ea0;
+  text-align: center;
+  border-radius: 2px; }
+  .settings__btn--blue {
+    background-color: #282cfa;
+    color: #f9f9f9; }
+  .settings__btn--red {
+    background-color: #ad2149;
+    color: #f9f9f9; }
 
 .map {
   stroke: #9e9ea0;

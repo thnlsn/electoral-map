@@ -42,7 +42,7 @@ function App() {
   return (
     <main className='App'>
       <Bar bluePts={bluePts} redPts={redPts} nonePts={nonePts} />
-      <Settings handleChangeParty={handleChangeParty} />
+      <Settings handleChangeParty={handleChangeParty} party={party} />
       <Map
         states={states}
         handleClick={logData}
