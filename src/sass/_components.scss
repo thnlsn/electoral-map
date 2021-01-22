@@ -1,3 +1,21 @@
+.bar {
+  width: 100%;
+  height: 7.5vh;
+  background-color: $color-grey;
+
+  display: grid;
+  // The min-content columns will be the red/blue with the middle being the leftover
+
+  position: relative;
+
+  &__blue {
+    background-color: $color-dem;
+  }
+  &__red {
+    background-color: $color-rep;
+  }
+}
+
 .map {
   fill: $color-grey-light;
   stroke: $color-grey;
