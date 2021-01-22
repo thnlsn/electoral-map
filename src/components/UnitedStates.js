@@ -1,13 +1,12 @@
 import React from 'react';
 
-function UnitedStates({ states, handleClick, blueStates, redStates }) {
-  const colorExists = () => {
-    console.log(this);
-    return 'none';
-  };
-
-  console.log(blueStates);
-
+function UnitedStates({
+  states,
+  handleClick,
+  blueStates,
+  redStates,
+  noneStates,
+}) {
   return (
     <svg
       className='map-container'
@@ -21,13 +20,23 @@ function UnitedStates({ states, handleClick, blueStates, redStates }) {
         {states.map((state, index) => (
           <path
             className={`map__state ${
-              blueStates.includes(index) ? 'blue' : 'none'
+              noneStates.includes(state.name)
+                ? 'none'
+                : blueStates.includes(state.name)
+                ? 'blue'
+                : 'red'
             }`}
             id={`${state.name}`}
             d={state.path}
             onClick={handleClick}
             data-points={state.points}
-            data-key={index}
+            data-party={
+              noneStates.includes(state.name)
+                ? 'none'
+                : blueStates.includes(state.name)
+                ? 'blue'
+                : 'red'
+            }
             key={index}
           ></path>
         ))}

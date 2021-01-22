@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Settings = ({ handleChangeParty, party }) => {
+const Settings = ({ handleChangeParty, party, blue, red, none }) => {
   return (
     <div className='settings'>
       <div
@@ -34,6 +34,9 @@ const Settings = ({ handleChangeParty, party }) => {
         None
       </div>
       <div className='settings__selected'>{party}</div>
+      <div className='settings__selected'>Blue:{blue}</div>
+      <div className='settings__selected'>Red: {red}</div>
+      <div className='settings__selected'>None: {none}</div>
     </div>
   );
 };
