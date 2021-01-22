@@ -69,6 +69,10 @@ body {
   .settings__btn--red {
     background-color: #ad2149;
     color: #f9f9f9; }
+  .settings__btn--selected {
+    border: 20px solid black; }
+  .settings__btn--unselected {
+    border: 20px solid grey; }
 
 .map {
   stroke: #9e9ea0;

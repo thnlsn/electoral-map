@@ -5,17 +5,32 @@ const Settings = ({ handleChangeParty, party }) => {
     <div className='settings'>
       <div
         onClick={handleChangeParty}
-        className='settings__btn settings__btn--blue'
+        className={`settings__btn settings__btn--blue ${
+          party === 'blue'
+            ? 'settings__btn--selected'
+            : 'settings__btn--unselected'
+        }`}
       >
         Blue
       </div>
       <div
         onClick={handleChangeParty}
-        className='settings__btn settings__btn--red'
+        className={`settings__btn settings__btn--red ${
+          party === 'red'
+            ? 'settings__btn--selected'
+            : 'settings__btn--unselected'
+        }`}
       >
         Red
       </div>
-      <div onClick={handleChangeParty} className='settings__btn'>
+      <div
+        onClick={handleChangeParty}
+        className={`settings__btn settings__btn ${
+          party === 'none'
+            ? 'settings__btn--selected'
+            : 'settings__btn--unselected'
+        }`}
+      >
         None
       </div>
       <div className='settings__selected'>{party}</div>

@@ -16,7 +16,7 @@ function App() {
   const [noneStates, setNoneStates] = useState([]);
   const [redStates, setRedStates] = useState([]);
 
-  const [party, setParty] = useState('blue');
+  const [party, setParty] = useState('none');
 
   const handleChangeParty = (e) => {
     const selectedParty = e.target.textContent.toLowerCase();

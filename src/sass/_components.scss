@@ -32,6 +32,13 @@
       background-color: $color-rep;
       color: $color-grey-light;
     }
+
+    &--selected {
+      border: 20px solid black;
+    }
+    &--unselected {
+      border: 20px solid grey;
+    }
   }
 }
 
