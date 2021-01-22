@@ -1,7 +1,15 @@
 .App {
   display: grid;
+  grid-template-columns: [full-start settings-start] 1fr [settings-end map-start] 4fr [map-end full-end];
   grid-template-rows: min-content;
   height: 100vh;
+}
+
+.bar {
+  grid-column: full-start / full-end;
+}
+
+.settings {
 }
 
 .map-container {
