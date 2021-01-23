@@ -161,9 +161,22 @@ else, clicked and selected must be different:
         }
         break;
       default:
-      //NONE SELECTED: CLICK NONE --> DO NOTHING
-      //NONE SELECTED: CLICK BLUE --> [ADD POINTS TO NONE + ADD STATE TO NONE + SUBTRACT POINTS FROM BLUE + REMOVE STATE FROM BLUE]
-      //NONE SELECTED: CLICK RED --> {ADD POINTS TO NONE + ADD STATE TO NONE + SUBTRACT POINTS FROM RED + REMOVE STATE FROM RED}
+        //NONE SELECTED: CLICK NONE --> DO NOTHING
+        //NONE SELECTED: CLICK BLUE --> [ADD POINTS TO NONE + ADD STATE TO NONE + SUBTRACT POINTS FROM BLUE + REMOVE STATE FROM BLUE]
+        //NONE SELECTED: CLICK RED --> {ADD POINTS TO NONE + ADD STATE TO NONE + SUBTRACT POINTS FROM RED + REMOVE STATE FROM RED}
+        if (clicked === 'none') {
+          return;
+        } else if (clicked === 'blue') {
+          setNonePts(nonePts + points);
+          setNoneStates([...noneStates, state]);
+          setBluePts(bluePts - points);
+          setBlueStates(blueStates.filter((blueState) => blueState !== state));
+        } else {
+          setNonePts(nonePts + points);
+          setNoneStates([...noneStates, state]);
+          setRedPts(redPts - points);
+          setRedStates(redStates.filter((redState) => redState !== state));
+        }
     }
   };
 
