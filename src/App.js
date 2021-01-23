@@ -119,25 +119,51 @@ else, clicked and selected must be different:
   const handleClick = (selected, clicked, state, points) => {
     switch (selected) {
       case 'blue':
+        //BLUE SELECTED: CLICK NONE --> ADD POINTS TO BLUE + ADD STATE TO BLUE + SUBTRACT POINTS FROM NONE + REMOVE STATE FROM NONE
+        //BLUE SELECTED: CLICK BLUE --> [ADD POINTS TO NONE + ADD STATE TO NONE + SUBTRACT POINTS FROM BLUE + REMOVE STATE FROM BLUE]
+        //BLUE SELECTED: CLICK RED --> ADD POINTS TO BLUE + ADD STATE TO BLUE + SUBTRACT POINTS FROM RED + REMOVE STATE FROM RED//
         if (clicked === 'none') {
-          // Add points to blue
           setBluePts(bluePts + points);
-          // Add that state to the blueStates
           setBlueStates([...blueStates, state]);
-          // Subtract points from none
           setNonePts(nonePts - points);
-          // Remove it from the noneStates by filtering the array so that it only includes items that do not match the state clicked
           setNoneStates(noneStates.filter((noneState) => noneState !== state));
         } else if (clicked === 'blue') {
           setNonePts(nonePts + points);
           setNoneStates([...noneStates, state]);
           setBluePts(bluePts - points);
+          setBlueStates(blueStates.filter((blueState) => blueState !== state));
+        } else {
+          setBluePts(bluePts + points);
           setBlueStates([...blueStates, state]);
+          setRedPts(redPts - points);
+          setRedStates(redStates.filter((redState) => redState !== state));
         }
         break;
       case 'red':
+        //RED SELECTED: CLICK NONE --> ADD POINTS TO RED + ADD STATE TO RED + SUBTRACT POINTS FROM NONE + REMOVE STATE FROM NONE
+        //RED SELECTED: CLICK BLUE --> ADD POINTS TO RED + ADD STATE TO RED + SUBTRACT POINTS FROM BLUE + REMOVE STATE FROM BLUE
+        //RED SELECTED: CLICK RED --> {ADD POINTS TO NONE + ADD STATE TO NONE + SUBTRACT POINTS FROM RED + REMOVE STATE FROM RED}
+        if (clicked === 'none') {
+          setRedPts(redPts + points); // +pts red
+          setRedStates([...redStates, state]); // +state red
+          setNonePts(nonePts - points); // -pts none
+          setNoneStates(noneStates.filter((noneState) => noneState !== state)); // -state none
+        } else if (clicked === 'blue') {
+          setRedPts(redPts + points);
+          setRedStates([...redStates, state]);
+          setBluePts(bluePts - points);
+          setBlueStates(blueStates.filter((blueState) => blueState !== state));
+        } else {
+          setNonePts(nonePts + points);
+          setNoneStates([...noneStates, state]);
+          setRedPts(redPts - points);
+          setRedStates(redStates.filter((redState) => redState !== state));
+        }
         break;
       default:
+      //NONE SELECTED: CLICK NONE --> DO NOTHING
+      //NONE SELECTED: CLICK BLUE --> [ADD POINTS TO NONE + ADD STATE TO NONE + SUBTRACT POINTS FROM BLUE + REMOVE STATE FROM BLUE]
+      //NONE SELECTED: CLICK RED --> {ADD POINTS TO NONE + ADD STATE TO NONE + SUBTRACT POINTS FROM RED + REMOVE STATE FROM RED}
     }
   };
 
