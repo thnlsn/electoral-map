@@ -16,6 +16,12 @@ function UnitedStates({
       // fill='none'
       viewBox='0 0 1000 589'
     >
+      <defs>
+        <filter id='f1' x='0' y='0' width='200%' height='200%'>
+          <feOffset result='offOut' in='SourceGraphic' dx='20' dy='20' />
+          <feBlend in='SourceGraphic' in2='offOut' mode='normal' />
+        </filter>
+      </defs>
       <g className='map'>
         {states.map((state, index) => (
           <path

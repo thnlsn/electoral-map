@@ -3,13 +3,20 @@
   --color-black: #000;
 }
 
+// $color-blue: #282cfa;
+// $color-red: #ad2149;
 $color-blue: #282cfa;
-$color-red: #ad2149;
-$color-blue: #282cfa;
-$color-red: #ad2149;
+$color-red: #ad2621;
+
+$color-green: #57d985;
+
+$color-gold: #d9c882;
+$color-gold-light: #ffeb9931;
 
 $color-grey: #9e9ea0;
 $color-grey-light: #f9f9f9;
+// $color-grey: #d9c882;
+// $color-grey-light: #ffeb99;
 
 $color-white: #fff;
 $color-black: #000;
@@ -26,7 +33,7 @@ $header-font: 'Playfair Display', serif;
 }
 
 .none {
-  fill: $color-grey-light;
+  fill: $color-gold-light;
 }
 .blue {
   fill: $color-blue;

@@ -6,13 +6,13 @@
   stroke-width: 0.1px !important; }
 
 .none {
-  fill: #f9f9f9; }
+  fill: #ffeb9931; }
 
 .blue {
   fill: #282cfa; }
 
 .red {
-  fill: #ad2149; }
+  fill: #ad2621; }
 
 .bar {
   font-family: "Fauna One", serif;
@@ -47,7 +47,8 @@ body {
   display: grid;
   grid-template-columns: [full-start settings-start] 1fr [settings-end map-start] 5fr [map-end full-end];
   grid-template-rows: min-content;
-  height: 100vh; }
+  height: 100vh;
+  background-color: #f9f9f9; }
 
 .bar {
   grid-column: full-start / full-end; }
@@ -64,7 +65,7 @@ body {
 .bar {
   width: 100%;
   height: 4vh;
-  background-color: #9e9ea0;
+  background-color: #d9c882;
   display: grid;
   position: relative; }
   .bar::before {
@@ -75,10 +76,9 @@ body {
     width: 1px;
     height: 150%;
     background-color: #9e9ea0;
-    transform: translateX(-50%);
-    z-index: -1; }
+    transform: translateX(-50%); }
   .bar::after {
-    content: '270 to win';
+    content: attr(data-winner);
     position: absolute;
     color: #9e9ea0;
     font-size: 1.6rem;
@@ -97,7 +97,7 @@ body {
       right: 25%; }
   .bar__red {
     position: relative;
-    background-color: #ad2149; }
+    background-color: #ad2621; }
     .bar__red::after {
       transform: translate(50%, -50%);
       left: 25%; }
@@ -117,7 +117,7 @@ body {
     background-color: #282cfa;
     color: #f9f9f9; }
   .settings__btn--red {
-    background-color: #ad2149;
+    background-color: #ad2621;
     color: #f9f9f9; }
   .settings__btn--selected {
     border: 20px solid black; }
@@ -125,24 +125,16 @@ body {
     border: 20px solid grey; }
 
 .map {
-  stroke: #9e9ea0;
+  stroke: #d9c882;
   stroke-linejoin: round; }
   .map__state {
     stroke-width: 0.971px;
-    transition: all 0.5s;
+    transition: all 0.4s;
     position: relative;
     cursor: pointer; }
-    .map__state::after {
-      content: 'CA';
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50% -50%);
-      height: 1rem;
-      width: 1rem; }
     .map__state.blue:hover {
-      fill: rgba(40, 44, 250, 0.9); }
+      fill: rgba(40, 44, 250, 0.8); }
     .map__state.red:hover {
-      fill: rgba(173, 33, 73, 0.85); }
+      fill: rgba(173, 38, 33, 0.8); }
     .map__state.none:hover {
-      fill: rgba(158, 158, 160, 0.25); }
+      fill: rgba(255, 235, 153, 0.55); }

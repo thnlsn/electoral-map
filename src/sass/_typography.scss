@@ -2,7 +2,7 @@
   font-family: $default-font;
   line-height: 1;
   font-weight: 700;
-  color: rgba($color: white, $alpha: 0.7);
+  color: rgba($color: $color-white, $alpha: 0.7);
 }
 
 .settings {
@@ -13,5 +13,5 @@
   font-family: $default-font;
   line-height: 1;
   font-weight: 700;
-  color: rgba($color: black, $alpha: 0.7);
+  color: rgba($color: $color-black, $alpha: 0.7);
 }
