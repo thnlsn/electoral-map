@@ -10,4 +10,8 @@
 }
 
 .map {
+  font-family: $default-font;
+  line-height: 1;
+  font-weight: 700;
+  color: rgba($color: black, $alpha: 0.7);
 }

@@ -33,9 +33,6 @@ const Settings = ({ handleChangeParty, party, blue, red, none }) => {
       >
         None
       </div>
-      <div className='settings__selected'>Blue: {blue}</div>
-      <div className='settings__selected'>Red: {red}</div>
-      <div className='settings__selected'>None: {none}</div>
     </div>
   );
 };

@@ -3,11 +3,16 @@
   --color-black: #000;
 }
 
-$color-dem: #282cfa;
-$color-rep: #ad2149;
+$color-blue: #282cfa;
+$color-red: #ad2149;
+$color-blue: #282cfa;
+$color-red: #ad2149;
 
 $color-grey: #9e9ea0;
 $color-grey-light: #f9f9f9;
+
+$color-white: #fff;
+$color-black: #000;
 
 $default-font: 'Fauna One', serif;
 $header-font: 'Playfair Display', serif;
@@ -17,15 +22,15 @@ $header-font: 'Playfair Display', serif;
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 #district-of-columbia {
-  stroke-width: 0.5px !important;
+  stroke-width: 0.1px !important;
 }
 
 .none {
   fill: $color-grey-light;
 }
 .blue {
-  fill: #282cfa;
+  fill: $color-blue;
 }
 .red {
-  fill: $color-rep;
+  fill: $color-red;
 }
