@@ -12,8 +12,8 @@ function App() {
   const [nonePts, setNonePts] = useState(538);
   const [redPts, setRedPts] = useState(0);
 
-  const [blueStates, setBlueStates] = useState(['california']);
-  const [redStates, setRedStates] = useState(['oklahoma']);
+  const [blueStates, setBlueStates] = useState([]);
+  const [redStates, setRedStates] = useState([]);
   const [noneStates, setNoneStates] = useState([
     'massachusetts',
     'minnesota',
@@ -23,7 +23,7 @@ function App() {
     'idaho',
     'washington',
     'arizona',
-    //'california',
+    'california',
     'colorado',
     'nevada',
     'new mexico',
@@ -35,7 +35,7 @@ function App() {
     'kansas',
     'missouri',
     'nebraska',
-    //'oklahoma',
+    'oklahoma',
     'south dakota',
     'louisiana',
     'texas',
@@ -68,8 +68,6 @@ function App() {
     'alaska',
   ]);
 
-  console.log(noneStates.length);
-
   const [selectedParty, setSelectedParty] = useState('none');
 
   const handleChangeParty = (e) => {
@@ -98,17 +96,87 @@ function App() {
     }
   };
 
-  const addToParty = () => {
-    //// We need
-    // the selected party (so we know what party to add state to and the color to change the state to)
+  /* 
+  
+  NONE SELECTED: CLICK NONE --> DO NOTHING
+  NONE SELECTED: CLICK BLUE --> [ADD POINTS TO NONE + ADD STATE TO NONE + SUBTRACT POINTS FROM BLUE + REMOVE STATE FROM BLUE]
+  NONE SELECTED: CLICK RED --> {ADD POINTS TO NONE + ADD STATE TO NONE + SUBTRACT POINTS FROM RED + REMOVE STATE FROM RED}
+
+  BLUE SELECTED: CLICK NONE --> ADD POINTS TO BLUE + ADD STATE TO BLUE + SUBTRACT POINTS FROM NONE + REMOVE STATE FROM NONE
+  BLUE SELECTED: CLICK BLUE --> [ADD POINTS TO NONE + ADD STATE TO NONE + SUBTRACT POINTS FROM BLUE + REMOVE STATE FROM BLUE]
+  BLUE SELECTED: CLICK RED --> ADD POINTS TO BLUE + ADD STATE TO BLUE + SUBTRACT POINTS FROM RED + REMOVE STATE FROM RED
+
+  RED SELECTED: CLICK NONE --> ADD POINTS TO RED + ADD STATE TO RED + SUBTRACT POINTS FROM NONE + REMOVE STATE FROM NONE
+  RED SELECTED: CLICK BLUE --> ADD POINTS TO RED + ADD STATE TO RED + SUBTRACT POINTS FROM BLUE + REMOVE STATE FROM BLUE
+  RED SELECTED: CLICK RED --> {ADD POINTS TO NONE + ADD STATE TO NONE + SUBTRACT POINTS FROM RED + REMOVE STATE FROM RED}
+
+if clicked and selected are same: set to none and if it was red, subtract from red and add to none, same for blue
+else, clicked and selected must be different:
+  - if clicked is none, minus
+
+  */
+
+  const handleClick = (selected, clicked, state, points) => {
+    switch (selected) {
+      case 'blue':
+        if (clicked === 'none') {
+          // Add points to blue
+          setBluePts(bluePts + points);
+          // Add that state to the blueStates
+          setBlueStates([...blueStates, state]);
+          // Subtract points from none
+          setNonePts(nonePts - points);
+          // Remove it from the noneStates by filtering the array so that it only includes items that do not match the state clicked
+          setNoneStates(noneStates.filter((noneState) => noneState !== state));
+        } else if (clicked === 'blue') {
+          setNonePts(nonePts + points);
+          setNoneStates([...noneStates, state]);
+          setBluePts(bluePts - points);
+          setBlueStates([...blueStates, state]);
+        }
+        break;
+      case 'red':
+        break;
+      default:
+    }
+  };
+
+  const addToParty = (selectedParty, clickedParty, state) => {
+    // If the state clicked is currently a none state AND the selected party is blue or red...
+    console.log(noneStates.includes(state) && selectedParty !== 'none');
+    // CLICKED ON NONE STATE AND EITHER BLUE OR RED IS SELECTED
+    if (noneStates.includes(state) && selectedParty !== 'none') {
+      if (selectedParty === 'blue') {
+        console.log(
+          `YOU HAVE ${selectedParty} SELECTED AND YOU CLICKED ON ${state}, WHICH IS A ${clickedParty} STATE`
+        );
+        // First add that state to the blueStates
+        setBlueStates([...blueStates, state]);
+        // Remove it from the noneStates by filtering the array so that it only includes items that do not match the state clicked
+        setNoneStates(noneStates.filter((noneState) => noneState !== state));
+        console.log(noneStates);
+      } else if (selectedParty === 'red') {
+        console.log(
+          `YOU HAVE ${selectedParty} SELECTED AND YOU CLICKED ON ${state}, WHICH IS A ${clickedParty} STATE`
+        );
+        // First add that state to the blueStates
+        setRedStates([...redStates, state]);
+        // Remove it from the noneStates by filtering the array so that it only includes items that do not match the state clicked
+        setNoneStates(noneStates.filter((noneState) => noneState !== state));
+        console.log(noneStates);
+      }
+      /*     // CLICKED ON RED OR BLUE STATE
+    } else if (!noneStates.includes(state)) */
+    }
   };
 
   const logData = (e) => {
-    let data = e.target.id;
+    let state = e.target.id;
     let points = Number(e.target.dataset.points);
-    let key = Number(e.target.dataset.key);
-    let party = e.target.dataset.party;
-    addPts(points, selectedParty, party);
+    let clickedParty = e.target.dataset.party;
+    /*     addPts(points, selectedParty, clickedParty);
+    addToParty(selectedParty, clickedParty, name); */
+    handleClick(selectedParty, clickedParty, state, points);
   };
 
   useEffect(() => {
