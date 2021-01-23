@@ -144,8 +144,6 @@ function App() {
     let state = e.target.id;
     let points = Number(e.target.dataset.points);
     let clickedParty = e.target.dataset.party;
-    /*     addPts(points, selectedParty, clickedParty);
-    addToParty(selectedParty, clickedParty, name); */
     handleClick(selectedParty, clickedParty, state, points);
   };
 
