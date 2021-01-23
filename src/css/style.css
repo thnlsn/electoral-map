@@ -14,7 +14,15 @@
 .red {
   fill: #ad2149; }
 
-/* @import 'typography'; */
+.bar {
+  font-family: "Fauna One", serif;
+  line-height: 1;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.7); }
+
+.settings {
+  font-family: "Playfair Display", serif; }
+
 html {
   box-sizing: border-box;
   font-size: 62.5%; }
@@ -52,13 +60,23 @@ body {
   height: 4vh;
   background-color: #9e9ea0;
   display: grid;
-  position: relative;
-  overflow: hidden; }
-  .bar__blue::after, .bar__red::after {
+  position: relative; }
+  .bar::before {
+    content: '';
     position: absolute;
-    top: 50%;
-    color: var(--color-black);
-    content: attr(data-content); }
+    bottom: top;
+    left: 50%;
+    border: 2px solid var(--color-black);
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    height: 150%;
+    transform: translateX(-50%);
+    background-color: var(--color-black);
+    z-index: -1; }
+  .bar__blue::after, .bar__red::after, .bar__none::after {
+    content: attr(data-content);
+    position: absolute;
+    top: 47.5%; }
   .bar__blue {
     position: relative;
     background-color: #282cfa; }
@@ -71,6 +89,11 @@ body {
     .bar__red::after {
       transform: translate(50%, -50%);
       left: 25%; }
+  .bar__none {
+    position: relative;
+    left: 50%; }
+    .bar__none::after {
+      transform: translate(-50%, -50%); }
 
 .settings__btn {
   cursor: pointer;

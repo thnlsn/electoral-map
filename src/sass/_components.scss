@@ -6,14 +6,28 @@
   display: grid;
   // The min-content columns will be the red/blue with the middle being the leftover
   position: relative;
-  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: top;
+    left: 50%;
+
+    border: 2px solid var(--color-black);
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    height: 150%;
+    transform: translateX(-50%);
+    background-color: var(--color-black);
+    z-index: -1;
+  }
 
   &__blue::after,
-  &__red::after {
-    position: absolute;
-    top: 50%;
-    color: var(--color-black);
+  &__red::after,
+  &__none::after {
     content: attr(data-content);
+    position: absolute;
+    top: 47.5%;
   }
 
   &__blue {
@@ -32,6 +46,14 @@
     &::after {
       transform: translate(50%, -50%);
       left: 25%;
+    }
+  }
+  &__none {
+    position: relative;
+    left: 50%;
+
+    &::after {
+      transform: translate(-50%, -50%);
     }
   }
 }
