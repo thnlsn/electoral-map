@@ -1,6 +1,6 @@
 .App {
   display: grid;
-  grid-template-columns: [full-start settings-start] 1fr [settings-end map-start] 5fr [map-end full-end];
+  grid-template-columns: [full-start settings-start] 1fr [settings-end map-start] 5fr [map-end legend-start ] 1fr[ legend-end full-end];
   grid-template-rows: min-content;
   height: 100vh;
   background-color: $color-grey-light;
@@ -20,4 +20,5 @@
 .map-container {
   height: 100%;
   width: 100%;
+  overflow: hidden;
 }

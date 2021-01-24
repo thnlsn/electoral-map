@@ -14,17 +14,18 @@
     left: 50%;
 
     width: 1px;
-    height: 150%;
-    background-color: $color-grey;
+    height: 140%;
+    background-color: $color-gold;
     transform: translateX(-50%);
+    z-index: 0;
   }
 
   &::after {
     content: attr(data-winner);
     position: absolute;
-    color: $color-grey;
+    color: $color-gold;
     font-size: 1.6rem;
-    top: 155%;
+    top: 145%;
     left: 50%;
     transform: translateX(-50%);
   }
@@ -92,10 +93,11 @@
 }
 
 .map {
-  stroke: $color-gold;
-  stroke-linejoin: round;
+  // transform: translateX(-5.5%);
 
   &__state {
+    stroke: $color-gold;
+    stroke-linejoin: round;
     stroke-width: 0.971px;
 
     transition: all 0.4s;
@@ -103,6 +105,9 @@
     position: relative;
 
     cursor: pointer;
+
+    /*     &:hover {
+    } */
 
     &.blue:hover {
       fill: rgba($color: $color-blue, $alpha: 0.8);
@@ -112,6 +117,14 @@
     }
     &.none:hover {
       fill: rgba($color: $color-gold-light, $alpha: 0.55);
+      stroke-width: 1.8px;
     }
   }
+}
+
+.states {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  align-items: center;
 }

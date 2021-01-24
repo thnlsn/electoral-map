@@ -23,16 +23,6 @@ const Settings = ({ handleChangeParty, party, blue, red, none }) => {
       >
         Red
       </div>
-      <div
-        onClick={handleChangeParty}
-        className={`settings__btn settings__btn ${
-          party === 'none'
-            ? 'settings__btn--selected'
-            : 'settings__btn--unselected'
-        }`}
-      >
-        None
-      </div>
     </div>
   );
 };

@@ -4,8 +4,10 @@ import './css/style.css';
 import Bar from './components/PointBar';
 import Settings from './components/Settings';
 import Map from './components/UnitedStates';
+import States from './components/States';
 
 import states from './states';
+import staits from './staits';
 
 function App() {
   const [bluePts, setBluePts] = useState(0);
@@ -70,13 +72,23 @@ function App() {
 
   const [selectedParty, setSelectedParty] = useState('none');
 
+  const [hovered, setHovered] = useState('');
+
   const handleChangeParty = (e) => {
     const selectedParty = e.target.textContent.toLowerCase();
     console.log(selectedParty);
     setSelectedParty(selectedParty);
   };
 
-  const handleClick = (selected, clicked, state, points) => {
+  const handleClick = (e) => {
+    let state = e.target.id;
+    let points = Number(e.target.dataset.points);
+    let clicked = e.target.dataset.party;
+    let selected = selectedParty;
+    console.log(state);
+    console.log(points);
+    console.log(clicked);
+    console.log(selectedParty);
     switch (selected) {
       case 'blue':
         //BLUE SELECTED: CLICK NONE --> ADD POINTS TO BLUE + ADD STATE TO BLUE + SUBTRACT POINTS FROM NONE + REMOVE STATE FROM NONE
@@ -140,17 +152,6 @@ function App() {
     }
   };
 
-  const logData = (e) => {
-    let state = e.target.id;
-    let points = Number(e.target.dataset.points);
-    let clickedParty = e.target.dataset.party;
-    handleClick(selectedParty, clickedParty, state, points);
-  };
-
-  useEffect(() => {
-    console.log('rerender');
-  }, []);
-
   return (
     <main className='App'>
       <Bar bluePts={bluePts} redPts={redPts} nonePts={nonePts} />
@@ -162,8 +163,15 @@ function App() {
         none={nonePts}
       />
       <Map
+        states={staits}
+        handleClick={handleClick}
+        blueStates={blueStates}
+        redStates={redStates}
+        noneStates={noneStates}
+      />
+      <States
         states={states}
-        handleClick={logData}
+        handleClick={handleClick}
         blueStates={blueStates}
         redStates={redStates}
         noneStates={noneStates}

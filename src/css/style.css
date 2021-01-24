@@ -2,8 +2,11 @@
   --color-white: #fff;
   --color-black: #000; }
 
-#district-of-columbia {
+.map #district-of-columbia {
   stroke-width: 0.1px !important; }
+
+.states path {
+  stroke-width: 1.8px; }
 
 .none {
   fill: #ffeb9931; }
@@ -45,7 +48,7 @@ body {
 
 .App {
   display: grid;
-  grid-template-columns: [full-start settings-start] 1fr [settings-end map-start] 5fr [map-end full-end];
+  grid-template-columns: [full-start settings-start] 1fr [settings-end map-start] 5fr [map-end legend-start] 1fr [legend-end full-end];
   grid-template-rows: min-content;
   height: 100vh;
   background-color: #f9f9f9; }
@@ -60,7 +63,8 @@ body {
 
 .map-container {
   height: 100%;
-  width: 100%; }
+  width: 100%;
+  overflow: hidden; }
 
 .bar {
   width: 100%;
@@ -74,15 +78,16 @@ body {
     top: 0;
     left: 50%;
     width: 1px;
-    height: 150%;
-    background-color: #9e9ea0;
-    transform: translateX(-50%); }
+    height: 140%;
+    background-color: #d9c882;
+    transform: translateX(-50%);
+    z-index: 0; }
   .bar::after {
     content: attr(data-winner);
     position: absolute;
-    color: #9e9ea0;
+    color: #d9c882;
     font-size: 1.6rem;
-    top: 155%;
+    top: 145%;
     left: 50%;
     transform: translateX(-50%); }
   .bar__blue::after, .bar__red::after, .bar__none::after {
@@ -124,17 +129,25 @@ body {
   .settings__btn--unselected {
     border: 20px solid grey; }
 
-.map {
+.map__state {
   stroke: #d9c882;
-  stroke-linejoin: round; }
-  .map__state {
-    stroke-width: 0.971px;
-    transition: all 0.4s;
-    position: relative;
-    cursor: pointer; }
-    .map__state.blue:hover {
-      fill: rgba(40, 44, 250, 0.8); }
-    .map__state.red:hover {
-      fill: rgba(173, 38, 33, 0.8); }
-    .map__state.none:hover {
-      fill: rgba(255, 235, 153, 0.55); }
+  stroke-linejoin: round;
+  stroke-width: 0.971px;
+  transition: all 0.4s;
+  position: relative;
+  cursor: pointer;
+  /*     &:hover {
+    } */ }
+  .map__state.blue:hover {
+    fill: rgba(40, 44, 250, 0.8); }
+  .map__state.red:hover {
+    fill: rgba(173, 38, 33, 0.8); }
+  .map__state.none:hover {
+    fill: rgba(255, 235, 153, 0.55);
+    stroke-width: 1.8px; }
+
+.states {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  align-items: center; }
