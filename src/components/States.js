@@ -10,10 +10,18 @@ import Delaware from './States/Delaware';
 import Maryland from './States/Maryland';
 import DistrictOfColumbia from './States/DistrictOfColumbia';
 
-const States = ({ states, handleClick, blueStates, redStates, noneStates }) => {
+const States = ({
+  states,
+  handleClick,
+  blueStates,
+  redStates,
+  noneStates,
+  handleHover,
+  handleHoverExit,
+}) => {
   return (
     <div className='states'>
-      <Vermont
+      {/* <Vermont
         states={states}
         noneStates={noneStates}
         blueStates={blueStates}
@@ -21,8 +29,8 @@ const States = ({ states, handleClick, blueStates, redStates, noneStates }) => {
         name={'vermont'}
         points={3}
         handleClick={handleClick}
-      />
-      <NewHampshire
+      /> */}
+      {/*       <NewHampshire
         states={states}
         noneStates={noneStates}
         blueStates={blueStates}
@@ -30,8 +38,8 @@ const States = ({ states, handleClick, blueStates, redStates, noneStates }) => {
         name={'new-hampshire'}
         points={4}
         handleClick={handleClick}
-      />
-      <Massachusetts
+      /> */}
+      {/*       <Massachusetts
         states={states}
         noneStates={noneStates}
         blueStates={blueStates}
@@ -39,7 +47,7 @@ const States = ({ states, handleClick, blueStates, redStates, noneStates }) => {
         name={'massachusetts'}
         points={11}
         handleClick={handleClick}
-      />
+      /> */}
       <RhodeIsland
         states={states}
         noneStates={noneStates}
@@ -48,8 +56,10 @@ const States = ({ states, handleClick, blueStates, redStates, noneStates }) => {
         name={'rhode-island'}
         points={4}
         handleClick={handleClick}
+        handleHover={handleHover}
+        handleHoverExit={handleHoverExit}
       />
-      <Connecticut
+      {/*       <Connecticut
         states={states}
         noneStates={noneStates}
         blueStates={blueStates}
@@ -57,8 +67,8 @@ const States = ({ states, handleClick, blueStates, redStates, noneStates }) => {
         name={'connecticut'}
         points={7}
         handleClick={handleClick}
-      />
-      <NewJersey
+      /> */}
+      {/*       <NewJersey
         states={states}
         noneStates={noneStates}
         blueStates={blueStates}
@@ -66,8 +76,8 @@ const States = ({ states, handleClick, blueStates, redStates, noneStates }) => {
         name={'new-jersey'}
         points={14}
         handleClick={handleClick}
-      />
-      <Delaware
+      /> */}
+      {/*       <Delaware
         states={states}
         noneStates={noneStates}
         blueStates={blueStates}
@@ -75,8 +85,8 @@ const States = ({ states, handleClick, blueStates, redStates, noneStates }) => {
         name={'delaware'}
         points={3}
         handleClick={handleClick}
-      />
-      <Maryland
+      /> */}
+      {/*       <Maryland
         states={states}
         noneStates={noneStates}
         blueStates={blueStates}
@@ -84,7 +94,7 @@ const States = ({ states, handleClick, blueStates, redStates, noneStates }) => {
         name={'maryland'}
         points={10}
         handleClick={handleClick}
-      />
+      /> */}
       <DistrictOfColumbia
         states={states}
         noneStates={noneStates}
@@ -93,6 +103,8 @@ const States = ({ states, handleClick, blueStates, redStates, noneStates }) => {
         name={'district-of-columbia'}
         points={3}
         handleClick={handleClick}
+        handleHover={handleHover}
+        handleHoverExit={handleHoverExit}
       />
     </div>
   );

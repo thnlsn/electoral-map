@@ -17,6 +17,22 @@
 .red {
   fill: #ad2621; }
 
+.blue.scale {
+  fill: rgba(40, 44, 250, 0.8);
+  position: relative; }
+  .blue.scale:before {
+    content: '';
+    position: absolute;
+    height: 100rem;
+    width: 100rem;
+    background-color: black; }
+
+.red.scale {
+  fill: rgba(173, 38, 33, 0.8); }
+
+.none.scale {
+  fill: rgba(217, 200, 130, 0.8); }
+
 .bar {
   font-family: "Fauna One", serif;
   line-height: 1;
@@ -143,8 +159,7 @@ body {
   .map__state.red:hover {
     fill: rgba(173, 38, 33, 0.8); }
   .map__state.none:hover {
-    fill: rgba(255, 235, 153, 0.55);
-    stroke-width: 1.8px; }
+    fill: rgba(217, 200, 130, 0.8); }
 
 .states {
   display: grid;

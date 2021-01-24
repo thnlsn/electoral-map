@@ -7,6 +7,8 @@ function DistrictOfColumbia({
   blueStates,
   redStates,
   handleClick,
+  handleHover,
+  handleHoverExit,
 }) {
   return (
     <svg
@@ -33,6 +35,8 @@ function DistrictOfColumbia({
         }
         data-points={points}
         onClick={handleClick}
+        onMouseEnter={handleHover}
+        onMouseLeave={handleHoverExit}
         id={name}
         d='M1 16.468l8.572 6.875L13 25.063l3.429-1.72 3.428 1.72 12 6.875 3.429 5.156v12.031L38.714 56 61 14.75 37 1 7.857 2.72 1 16.47v-.002z'
       ></path>

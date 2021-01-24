@@ -6,6 +6,7 @@ function UnitedStates({
   blueStates,
   redStates,
   noneStates,
+  hovered,
 }) {
   return (
     <svg
@@ -24,7 +25,7 @@ function UnitedStates({
                 : blueStates.includes(state.name)
                 ? 'blue'
                 : 'red'
-            }`}
+            } ${hovered === state.name ? 'scale' : 'unscale'}`}
             id={`${state.name}`}
             d={state.path}
             onClick={handleClick}

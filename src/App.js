@@ -74,6 +74,17 @@ function App() {
 
   const [hovered, setHovered] = useState('');
 
+  const handleHover = (e) => {
+    const hoveredState = e.target.id;
+    setHovered(hoveredState);
+
+    console.log(hoveredState);
+    console.log(hovered);
+  };
+  const handleHoverExit = () => {
+    setHovered('');
+  };
+
   const handleChangeParty = (e) => {
     const selectedParty = e.target.textContent.toLowerCase();
     console.log(selectedParty);
@@ -168,10 +179,13 @@ function App() {
         blueStates={blueStates}
         redStates={redStates}
         noneStates={noneStates}
+        hovered={hovered}
       />
       <States
-        states={states}
+        states={staits}
         handleClick={handleClick}
+        handleHover={handleHover}
+        handleHoverExit={handleHoverExit}
         blueStates={blueStates}
         redStates={redStates}
         noneStates={noneStates}
