@@ -14,14 +14,11 @@
 
 .settings {
   display: grid;
+  grid-template-columns: [full-start blue-start] 1fr [blue-end red-start] 1fr [red-end full-end];
+  padding: 4rem 4rem;
+  column-gap: 4rem;
 
-  justify-content: center;
-  align-items: center;
-}
-
-.map-section {
-  position: relative;
-  display: grid;
+  align-items: start;
 }
 
 .map-container {
@@ -31,8 +28,8 @@
   overflow: hidden;
 }
 
-.map__state-small {
+/* .map__state-small {
   position: absolute;
   top: 47.5%;
   right: 2%;
-}
+} */

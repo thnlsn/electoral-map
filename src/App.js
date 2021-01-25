@@ -86,9 +86,10 @@ function App() {
   };
 
   const handleChangeParty = (e) => {
-    const selectedParty = e.target.textContent.toLowerCase();
-    console.log(selectedParty);
-    setSelectedParty(selectedParty);
+    const selected = e.target.textContent.toLowerCase();
+    const toSelect = selected === selectedParty ? 'none' : selected;
+    console.log(toSelect);
+    setSelectedParty(toSelect);
   };
 
   const handleClick = (e) => {
