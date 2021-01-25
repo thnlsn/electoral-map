@@ -48,15 +48,6 @@ $header-font: 'Playfair Display', serif;
 
 .blue.scale {
   fill: rgba($color: $color-blue, $alpha: 0.8);
-  position: relative;
-
-  &:before {
-    content: '';
-    position: absolute;
-    height: 100rem;
-    width: 100rem;
-    background-color: black;
-  }
 }
 .red.scale {
   fill: rgba($color: $color-red, $alpha: 0.8);

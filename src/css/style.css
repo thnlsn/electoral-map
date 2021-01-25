@@ -18,14 +18,7 @@
   fill: #ad2621; }
 
 .blue.scale {
-  fill: rgba(40, 44, 250, 0.8);
-  position: relative; }
-  .blue.scale:before {
-    content: '';
-    position: absolute;
-    height: 100rem;
-    width: 100rem;
-    background-color: black; }
+  fill: rgba(40, 44, 250, 0.8); }
 
 .red.scale {
   fill: rgba(173, 38, 33, 0.8); }
