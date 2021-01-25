@@ -17,15 +17,15 @@
 .red {
   fill: #ad2621; }
 
-/* .blue.scale {
-  fill: rgba($color: $color-blue, $alpha: 0.8);
-}
-.red.scale {
-  fill: rgba($color: $color-red, $alpha: 0.8);
-}
-.none.scale {
-  fill: rgba($color: $color-gold, $alpha: 0.8);
-} */
+.blue.hovered {
+  fill: rgba(40, 44, 250, 0.8); }
+
+.red.hovered {
+  fill: rgba(173, 38, 33, 0.8); }
+
+.none.hovered {
+  fill: rgba(217, 200, 130, 0.8); }
+
 .bar {
   font-family: "Fauna One", serif;
   line-height: 1;
@@ -65,7 +65,7 @@ body {
   grid-template-rows: min-content;
   height: 100vh;
   background-color: #f9f9f9;
-  column-gap: 3rem; }
+  column-gap: 2rem; }
 
 .bar {
   grid-column: full-start / full-end; }
@@ -80,7 +80,7 @@ body {
 .map-container {
   height: 100%;
   width: 100%;
-  padding: 2rem;
+  padding: 2rem 0rem 2.1rem 2.5rem;
   overflow: hidden; }
 
 /* .map__state-small {
@@ -156,7 +156,7 @@ body {
     .settings__btn--selected {
       border: 1rem solid #d9c882; }
       .settings__btn--selected:hover {
-        outline: 0;
+        outline: none;
         z-index: 20; }
     .settings__btn--unselected {
       border: 1rem solid #f9f9f9; }
@@ -164,22 +164,26 @@ body {
         outline: 1rem solid #d9c882;
         z-index: 20; }
       .settings__btn--unselected:active {
-        transition: 0.25s outline;
+        transition: 0.25s outline 0s cubic-bezier(0.83, 0.23, 1, 0.25), 0.2 border 0.5s;
         outline: 0rem solid #d9c882;
         border: 1rem solid #d9c882; }
 
-.map__state {
-  stroke: #d9c882;
-  stroke-linejoin: round;
-  stroke-width: 0.971px;
-  transition: all 0.4s;
-  cursor: pointer; }
-  .map__state.blue:hover {
-    fill: rgba(40, 44, 250, 0.8); }
-  .map__state.red:hover {
-    fill: rgba(173, 38, 33, 0.8); }
-  .map__state.none:hover {
-    fill: rgba(217, 200, 130, 0.6); }
+.map {
+  /*   &__population {
+    opacity: calc(attr(data-points) / 100);
+  } */ }
+  .map__state {
+    stroke: #d9c882;
+    stroke-linejoin: round;
+    stroke-width: 0.971px;
+    transition: all 0.4s;
+    cursor: pointer; }
+    .map__state.blue:hover {
+      fill: rgba(40, 44, 250, 0.8); }
+    .map__state.red:hover {
+      fill: rgba(173, 38, 33, 0.8); }
+    .map__state.none:hover {
+      fill: rgba(217, 200, 130, 0.6); }
 
 /* .states {
   display: grid;

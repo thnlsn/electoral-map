@@ -1,6 +1,14 @@
 import React from 'react';
 
-const Settings = ({ handleChangeParty, party, blue, red, none }) => {
+const Settings = ({
+  handleChangeParty,
+  handleVisualizePopulation,
+  visualize,
+  party,
+  blue,
+  red,
+  none,
+}) => {
   return (
     <div className='settings'>
       <div
@@ -22,6 +30,16 @@ const Settings = ({ handleChangeParty, party, blue, red, none }) => {
         }`}
       >
         Red
+      </div>
+      <div
+        className={`settings__btn settings__btn--population ${
+          visualize === true
+            ? 'settings__btn--selected'
+            : 'settings__btn--unselected'
+        }`}
+        onClick={handleVisualizePopulation}
+      >
+        Visualize Points
       </div>
     </div>
   );

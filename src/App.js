@@ -71,6 +71,7 @@ function App() {
   ]);
 
   const [selectedParty, setSelectedParty] = useState('none');
+  const [visualizePopulation, setVisualizePopulation] = useState(false);
 
   const [hovered, setHovered] = useState('');
 
@@ -79,7 +80,6 @@ function App() {
     setHovered(hoveredState);
 
     console.log(hoveredState);
-    console.log(hovered);
   };
   const handleHoverExit = () => {
     setHovered('');
@@ -90,6 +90,10 @@ function App() {
     const toSelect = selected === selectedParty ? 'none' : selected;
     console.log(toSelect);
     setSelectedParty(toSelect);
+  };
+
+  const handleVisualizePopulation = () => {
+    setVisualizePopulation(visualizePopulation === true ? false : true);
   };
 
   const handleClick = (e) => {
@@ -169,6 +173,8 @@ function App() {
       <Bar bluePts={bluePts} redPts={redPts} nonePts={nonePts} />
       <Settings
         handleChangeParty={handleChangeParty}
+        handleVisualizePopulation={handleVisualizePopulation}
+        visualize={visualizePopulation}
         party={selectedParty}
         blue={bluePts}
         red={redPts}
@@ -177,6 +183,7 @@ function App() {
       <Map
         states={states}
         handleClick={handleClick}
+        visualize={visualizePopulation}
         blueStates={blueStates}
         redStates={redStates}
         noneStates={noneStates}

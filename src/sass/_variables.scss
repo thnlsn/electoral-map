@@ -3,8 +3,9 @@
   --color-black: #000;
 }
 
-// $color-blue: #282cfa;
-// $color-red: #ad2149;
+$color-bles: rgba(40, 44, 250, 1);
+$color-eds: rgba(173, 33, 73, 1);
+
 $color-blue: #282cfa;
 $color-red: #ad2621;
 
@@ -39,6 +40,7 @@ $header-font: 'Playfair Display', serif;
 .none {
   fill: $color-gold-light;
 }
+
 .blue {
   fill: $color-blue;
 }
@@ -46,12 +48,12 @@ $header-font: 'Playfair Display', serif;
   fill: $color-red;
 }
 
-/* .blue.scale {
+.blue.hovered {
   fill: rgba($color: $color-blue, $alpha: 0.8);
 }
-.red.scale {
+.red.hovered {
   fill: rgba($color: $color-red, $alpha: 0.8);
 }
-.none.scale {
+.none.hovered {
   fill: rgba($color: $color-gold, $alpha: 0.8);
-} */
+}

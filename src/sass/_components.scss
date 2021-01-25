@@ -98,8 +98,9 @@
     // Selected button styles
     &--selected {
       border: 1rem solid $color-gold;
+
       &:hover {
-        outline: 0;
+        outline: none;
         // box-shadow: 0 2.5rem 4rem rgba($color-black, 0.5);
         z-index: 20;
       }
@@ -114,7 +115,8 @@
         z-index: 20;
       }
       &:active {
-        transition: 0.25s outline;
+        transition: 0.25s outline 0s cubic-bezier(0.83, 0.23, 1, 0.25),
+          0.2 border 0.5s;
         outline: 0rem solid $color-gold;
 
         border: 1rem solid $color-gold; // Because we want to see the border change right as the outline is lessening
@@ -145,6 +147,10 @@
       fill: rgba($color: $color-gold, $alpha: 0.6);
     }
   }
+
+  /*   &__population {
+    opacity: calc(attr(data-points) / 100);
+  } */
 }
 
 /* .states {
