@@ -67,6 +67,8 @@
 }
 
 .settings {
+  border-right: 2px solid $color-gold;
+
   &__btn {
     cursor: pointer;
     padding: 1rem;
@@ -102,12 +104,7 @@
 
     transition: all 0.4s;
 
-    position: relative;
-
     cursor: pointer;
-
-    /*     &:hover {
-    } */
 
     &.blue:hover {
       fill: rgba($color: $color-blue, $alpha: 0.8);
@@ -121,9 +118,9 @@
   }
 }
 
-.states {
+/* .states {
   display: grid;
   grid-template-columns: 1fr;
   justify-items: center;
   align-items: center;
-}
+} */

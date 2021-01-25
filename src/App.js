@@ -6,8 +6,8 @@ import Settings from './components/Settings';
 import Map from './components/UnitedStates';
 import States from './components/States';
 
+import statesOld from './statesOld';
 import states from './states';
-import staits from './staits';
 
 function App() {
   const [bluePts, setBluePts] = useState(0);
@@ -174,22 +174,24 @@ function App() {
         none={nonePts}
       />
       <Map
-        states={staits}
+        states={states}
         handleClick={handleClick}
         blueStates={blueStates}
         redStates={redStates}
         noneStates={noneStates}
         hovered={hovered}
+        handleHover={handleHover}
+        handleHoverExit={handleHoverExit}
       />
-      <States
-        states={staits}
+      {/*       <States
+        states={states}
         handleClick={handleClick}
         handleHover={handleHover}
         handleHoverExit={handleHoverExit}
         blueStates={blueStates}
         redStates={redStates}
         noneStates={noneStates}
-      />
+      /> */}
     </main>
   );
 }

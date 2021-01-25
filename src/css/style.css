@@ -57,10 +57,11 @@ body {
 
 .App {
   display: grid;
-  grid-template-columns: [full-start settings-start] 1fr [settings-end map-start] 5fr [map-end legend-start] 1fr [legend-end full-end];
+  grid-template-columns: [full-start settings-start] 1fr [settings-end map-start] 4fr [map-end full-end];
   grid-template-rows: min-content;
   height: 100vh;
-  background-color: #f9f9f9; }
+  background-color: #f9f9f9;
+  column-gap: 3rem; }
 
 .bar {
   grid-column: full-start / full-end; }
@@ -70,10 +71,20 @@ body {
   justify-content: center;
   align-items: center; }
 
+.map-section {
+  position: relative;
+  display: grid; }
+
 .map-container {
   height: 100%;
   width: 100%;
+  padding: 2rem;
   overflow: hidden; }
+
+.map__state-small {
+  position: absolute;
+  top: 47.5%;
+  right: 2%; }
 
 .bar {
   width: 100%;
@@ -121,32 +132,31 @@ body {
       transform: translate(-50%, -50%);
       left: 50%; }
 
-.settings__btn {
-  cursor: pointer;
-  padding: 1rem;
-  background-color: #9e9ea0;
-  text-align: center;
-  border-radius: 2px; }
-  .settings__btn--blue {
-    background-color: #282cfa;
-    color: #f9f9f9; }
-  .settings__btn--red {
-    background-color: #ad2621;
-    color: #f9f9f9; }
-  .settings__btn--selected {
-    border: 20px solid black; }
-  .settings__btn--unselected {
-    border: 20px solid grey; }
+.settings {
+  border-right: 2px solid #d9c882; }
+  .settings__btn {
+    cursor: pointer;
+    padding: 1rem;
+    background-color: #9e9ea0;
+    text-align: center;
+    border-radius: 2px; }
+    .settings__btn--blue {
+      background-color: #282cfa;
+      color: #f9f9f9; }
+    .settings__btn--red {
+      background-color: #ad2621;
+      color: #f9f9f9; }
+    .settings__btn--selected {
+      border: 20px solid black; }
+    .settings__btn--unselected {
+      border: 20px solid grey; }
 
 .map__state {
   stroke: #d9c882;
   stroke-linejoin: round;
   stroke-width: 0.971px;
   transition: all 0.4s;
-  position: relative;
-  cursor: pointer;
-  /*     &:hover {
-    } */ }
+  cursor: pointer; }
   .map__state.blue:hover {
     fill: rgba(40, 44, 250, 0.8); }
   .map__state.red:hover {
@@ -154,8 +164,9 @@ body {
   .map__state.none:hover {
     fill: rgba(217, 200, 130, 0.8); }
 
-.states {
+/* .states {
   display: grid;
   grid-template-columns: 1fr;
   justify-items: center;
-  align-items: center; }
+  align-items: center;
+} */

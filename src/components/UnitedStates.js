@@ -9,39 +9,41 @@ function UnitedStates({
   hovered,
 }) {
   return (
-    <svg
-      className='map-container'
-      xmlns='http://www.w3.org/2000/svg'
-      width='832'
-      height='530'
-      viewBox='0 0 832 530'
-    >
-      <g className='map'>
-        {states.map((state, index) => (
-          <path
-            className={`map__state ${
-              noneStates.includes(state.name)
-                ? 'none'
-                : blueStates.includes(state.name)
-                ? 'blue'
-                : 'red'
-            } ${hovered === state.name ? 'scale' : 'unscale'}`}
-            id={`${state.name}`}
-            d={state.path}
-            onClick={handleClick}
-            data-points={state.points}
-            data-party={
-              noneStates.includes(state.name)
-                ? 'none'
-                : blueStates.includes(state.name)
-                ? 'blue'
-                : 'red'
-            }
-            key={index}
-          ></path>
-        ))}
-      </g>
-    </svg>
+    <div className='map-section'>
+      <svg
+        className='map-container'
+        xmlns='http://www.w3.org/2000/svg'
+        width='832'
+        height='530'
+        viewBox='0 0 832 530'
+      >
+        <g className='map'>
+          {states.map((state, index) => (
+            <path
+              className={`map__state ${
+                noneStates.includes(state.name)
+                  ? 'none'
+                  : blueStates.includes(state.name)
+                  ? 'blue'
+                  : 'red'
+              } ${hovered === state.name ? 'scale' : 'unscale'}`}
+              id={`${state.name}`}
+              d={state.path}
+              onClick={handleClick}
+              data-points={state.points}
+              data-party={
+                noneStates.includes(state.name)
+                  ? 'none'
+                  : blueStates.includes(state.name)
+                  ? 'blue'
+                  : 'red'
+              }
+              key={index}
+            ></path>
+          ))}
+        </g>
+      </svg>
+    </div>
   );
 }
 
