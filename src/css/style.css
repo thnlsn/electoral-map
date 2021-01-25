@@ -17,15 +17,15 @@
 .red {
   fill: #ad2621; }
 
-.blue.scale {
-  fill: rgba(40, 44, 250, 0.8); }
-
+/* .blue.scale {
+  fill: rgba($color: $color-blue, $alpha: 0.8);
+}
 .red.scale {
-  fill: rgba(173, 38, 33, 0.8); }
-
+  fill: rgba($color: $color-red, $alpha: 0.8);
+}
 .none.scale {
-  fill: rgba(217, 200, 130, 0.8); }
-
+  fill: rgba($color: $color-gold, $alpha: 0.8);
+} */
 .bar {
   font-family: "Fauna One", serif;
   line-height: 1;
@@ -89,7 +89,6 @@ body {
   right: 2%;
 } */
 .bar {
-  width: 100%;
   height: 4vh;
   background-color: #d9c882;
   display: grid;
@@ -148,12 +147,12 @@ body {
     transition: all 0.2s; }
     .settings__btn--blue {
       background-color: #282cfa; }
+      .settings__btn--blue:hover {
+        background-color: rgba(40, 44, 250, 0.8); }
     .settings__btn--red {
       background-color: #ad2621; }
-    .settings__btn--blue:hover {
-      background-color: rgba(40, 44, 250, 0.8); }
-    .settings__btn--red:hover {
-      background-color: rgba(173, 38, 33, 0.8); }
+      .settings__btn--red:hover {
+        background-color: rgba(173, 38, 33, 0.8); }
     .settings__btn--selected {
       border: 1rem solid #d9c882; }
       .settings__btn--selected:hover {
@@ -180,7 +179,7 @@ body {
   .map__state.red:hover {
     fill: rgba(173, 38, 33, 0.8); }
   .map__state.none:hover {
-    fill: rgba(217, 200, 130, 0.8); }
+    fill: rgba(217, 200, 130, 0.6); }
 
 /* .states {
   display: grid;

@@ -1,5 +1,4 @@
 .bar {
-  width: 100%;
   height: 4vh;
   background-color: $color-gold;
 
@@ -82,19 +81,21 @@
 
     transition: all 0.2s;
 
+    // Normal button styles
     &--blue {
       background-color: $color-blue;
+      &:hover {
+        background-color: rgba($color: $color-blue, $alpha: 0.8);
+      }
     }
     &--red {
       background-color: $color-red;
-    }
-    &--blue:hover {
-      background-color: rgba($color: $color-blue, $alpha: 0.8);
-    }
-    &--red:hover {
-      background-color: rgba($color: $color-red, $alpha: 0.8);
+      &:hover {
+        background-color: rgba($color: $color-red, $alpha: 0.8);
+      }
     }
 
+    // Selected button styles
     &--selected {
       border: 1rem solid $color-gold;
       &:hover {
@@ -103,6 +104,8 @@
         z-index: 20;
       }
     }
+
+    // Unselected button styles
     &--unselected {
       border: 1rem solid $color-grey-light;
       &:hover {
@@ -114,7 +117,7 @@
         transition: 0.25s outline;
         outline: 0rem solid $color-gold;
 
-        border: 1rem solid $color-gold;
+        border: 1rem solid $color-gold; // Because we want to see the border change right as the outline is lessening
       }
     }
   }
@@ -139,7 +142,7 @@
       fill: rgba($color: $color-red, $alpha: 0.8);
     }
     &.none:hover {
-      fill: rgba($color: $color-gold, $alpha: 0.8);
+      fill: rgba($color: $color-gold, $alpha: 0.6);
     }
   }
 }
