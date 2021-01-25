@@ -6,7 +6,13 @@
 }
 
 .settings {
-  font-family: $header-font;
+  &__btn {
+    font-family: $default-font;
+    line-height: 1;
+    font-weight: 700;
+    color: rgba($color: $color-white, $alpha: 0.8);
+    text-align: center;
+  }
 }
 
 .map {

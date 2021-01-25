@@ -32,8 +32,12 @@
   font-weight: 700;
   color: rgba(255, 255, 255, 0.7); }
 
-.settings {
-  font-family: "Playfair Display", serif; }
+.settings__btn {
+  font-family: "Fauna One", serif;
+  line-height: 1;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.8);
+  text-align: center; }
 
 .map {
   font-family: "Fauna One", serif;
@@ -130,27 +134,40 @@ body {
       transform: translate(-50%, -50%);
       left: 50%; }
 
+/* @keyframes outlineIn {
+  from {
+    outline: ;
+  }
+} */
 .settings {
   border-right: 2px solid #d9c882; }
   .settings__btn {
     cursor: pointer;
     padding: 1rem;
     background-color: #9e9ea0;
-    text-align: center;
-    border-radius: 2px; }
+    transition: all 0.2s; }
     .settings__btn--blue {
-      background-color: #282cfa;
-      color: #f9f9f9; }
+      background-color: #282cfa; }
     .settings__btn--red {
-      background-color: #ad2621;
-      color: #f9f9f9; }
+      background-color: #ad2621; }
+    .settings__btn--blue:hover {
+      background-color: rgba(40, 44, 250, 0.8); }
+    .settings__btn--red:hover {
+      background-color: rgba(173, 38, 33, 0.8); }
     .settings__btn--selected {
-      border: 20px solid black; }
+      border: 1rem solid #d9c882; }
+      .settings__btn--selected:hover {
+        outline: 0;
+        z-index: 20; }
     .settings__btn--unselected {
-      border: 20px solid grey; }
-    .settings__btn:hover {
-      outline: 1.5rem solid #d9c882;
-      z-index: 20; }
+      border: 1rem solid #f9f9f9; }
+      .settings__btn--unselected:hover {
+        outline: 1rem solid #d9c882;
+        z-index: 20; }
+      .settings__btn--unselected:active {
+        transition: 0.25s outline;
+        outline: 0rem solid #d9c882;
+        border: 1rem solid #d9c882; }
 
 .map__state {
   stroke: #d9c882;

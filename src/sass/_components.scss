@@ -66,6 +66,12 @@
   }
 }
 
+/* @keyframes outlineIn {
+  from {
+    outline: ;
+  }
+} */
+
 .settings {
   border-right: 2px solid $color-gold;
 
@@ -73,29 +79,43 @@
     cursor: pointer;
     padding: 1rem;
     background-color: $color-grey;
-    text-align: center;
-    border-radius: 2px;
+
+    transition: all 0.2s;
 
     &--blue {
       background-color: $color-blue;
-      color: $color-grey-light;
     }
     &--red {
       background-color: $color-red;
-      color: $color-grey-light;
+    }
+    &--blue:hover {
+      background-color: rgba($color: $color-blue, $alpha: 0.8);
+    }
+    &--red:hover {
+      background-color: rgba($color: $color-red, $alpha: 0.8);
     }
 
     &--selected {
-      border: 20px solid black;
+      border: 1rem solid $color-gold;
+      &:hover {
+        outline: 0;
+        // box-shadow: 0 2.5rem 4rem rgba($color-black, 0.5);
+        z-index: 20;
+      }
     }
     &--unselected {
-      border: 20px solid grey;
-    }
+      border: 1rem solid $color-grey-light;
+      &:hover {
+        outline: 1rem solid $color-gold;
+        // box-shadow: 0 2.5rem 4rem rgba($color-black, 0.5);
+        z-index: 20;
+      }
+      &:active {
+        transition: 0.25s outline;
+        outline: 0rem solid $color-gold;
 
-    &:hover {
-      outline: 1.5rem solid $color-gold;
-      // box-shadow: 0 2.5rem 4rem rgba($color-black, 0.5);
-      z-index: 20;
+        border: 1rem solid $color-gold;
+      }
     }
   }
 }
