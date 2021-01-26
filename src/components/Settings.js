@@ -36,14 +36,6 @@ const Settings = ({
         Red
       </div>
 
-      {/* RESET BUTTON */}
-      <div
-        className={`settings__btn settings__btn--reset`}
-        onClick={handleReset}
-      >
-        Reset
-      </div>
-
       {/* VISUALIZE BUTTON */}
       <div
         className={`settings__btn settings__btn--visualize ${
@@ -54,6 +46,14 @@ const Settings = ({
         onClick={handleVisualizePopulation}
       >
         Visualize Points
+      </div>
+
+      {/* RESET BUTTON */}
+      <div
+        className={`settings__btn settings__btn--reset`}
+        onClick={handleReset}
+      >
+        Reset
       </div>
 
       <hr />

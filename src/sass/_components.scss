@@ -128,9 +128,21 @@
     &--reset {
       grid-column: 1 / -1;
       justify-self: center;
-      background-color: $color-grey;
+      border: 2px solid $color-gold-dark;
+      color: $color-gold-dark;
 
-      padding: 1.5rem 2rem;
+      padding: 1rem 1.5rem;
+      margin: 1rem 0;
+
+      &:hover {
+        background-color: $color-gold;
+        color: $color-gold-light;
+      }
+      &:active {
+        background-color: $color-gold-dark;
+        color: $color-gold-light;
+        border-color: $color-font;
+      }
     }
   }
 

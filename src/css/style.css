@@ -189,8 +189,17 @@ body {
     .settings__btn--reset {
       grid-column: 1 / -1;
       justify-self: center;
-      background-color: #9e9ea0;
-      padding: 1.5rem 2rem; }
+      border: 2px solid #988c5b;
+      color: #988c5b;
+      padding: 1rem 1.5rem;
+      margin: 1rem 0; }
+      .settings__btn--reset:hover {
+        background-color: #d9c882;
+        color: #fbfaf3; }
+      .settings__btn--reset:active {
+        background-color: #988c5b;
+        color: #fbfaf3;
+        border-color: #5b5437; }
   .settings__footer {
     grid-column: 1 / -1; }
   .settings hr {
