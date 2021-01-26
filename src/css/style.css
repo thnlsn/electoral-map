@@ -74,6 +74,7 @@ body {
   display: grid;
   grid-template-columns: [full-start blue-start] 1fr [blue-end red-start] 1fr [red-end full-end];
   grid-template-rows: min-content;
+  grid-auto-rows: min-content;
   padding: 4rem 4rem;
   column-gap: 4rem;
   row-gap: 2rem;
@@ -170,6 +171,12 @@ body {
       justify-self: center;
       background-color: #988c5b;
       padding: 1rem 2rem; }
+  .settings hr {
+    grid-column: 1 / -1;
+    border: 1px solid #d9c882;
+    border-radius: 50%;
+    opacity: 1;
+    margin: auto 0; }
 
 .map {
   /*   &__population {

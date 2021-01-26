@@ -125,6 +125,14 @@
       padding: 1rem 2rem;
     }
   }
+
+  hr {
+    grid-column: 1 / -1;
+    border: 1px solid $color-gold;
+    border-radius: 50%;
+    opacity: 1;
+    margin: auto 0;
+  }
 }
 
 .map {

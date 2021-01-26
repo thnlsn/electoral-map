@@ -11,6 +11,7 @@ const Settings = ({
 }) => {
   return (
     <div className='settings'>
+      {/* BLUE BUTTON */}
       <div
         onClick={handleChangeParty}
         className={`settings__btn settings__btn--blue ${
@@ -21,6 +22,7 @@ const Settings = ({
       >
         Blue
       </div>
+      {/* RED BUTTON */}
       <div
         onClick={handleChangeParty}
         className={`settings__btn settings__btn--red ${
@@ -31,6 +33,7 @@ const Settings = ({
       >
         Red
       </div>
+      {/* VISUALIZE BUTTON */}
       <div
         className={`settings__btn settings__btn--population ${
           visualize === true
@@ -41,6 +44,9 @@ const Settings = ({
       >
         Visualize Points
       </div>
+
+      <hr />
+      {/*  */}
     </div>
   );
 };
