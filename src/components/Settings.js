@@ -12,7 +12,7 @@ const Settings = ({
   handleReset,
 }) => {
   return (
-    <div className='settings'>
+    <section className='settings'>
       {/* BLUE BUTTON */}
       <div
         onClick={handleChangeParty}
@@ -95,7 +95,7 @@ const Settings = ({
           </a>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
