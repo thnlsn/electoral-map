@@ -9,6 +9,7 @@ const Settings = ({
   visualize,
   party,
   text,
+  handleReset,
 }) => {
   return (
     <div className='settings'>
@@ -34,6 +35,15 @@ const Settings = ({
       >
         Red
       </div>
+
+      {/* RESET BUTTON */}
+      <div
+        className={`settings__btn settings__btn--reset`}
+        onClick={handleReset}
+      >
+        Reset
+      </div>
+
       {/* VISUALIZE BUTTON */}
       <div
         className={`settings__btn settings__btn--visualize ${

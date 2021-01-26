@@ -80,6 +80,71 @@ function App() {
     points: '',
   });
 
+  const handleReset = () => {
+    setNonePts(538);
+    setBluePts(0);
+    setRedPts(0);
+    setNoneStates([
+      'massachusetts',
+      'minnesota',
+      'montana',
+      'north-dakota',
+      'hawaii',
+      'idaho',
+      'washington',
+      'arizona',
+      'california',
+      'colorado',
+      'nevada',
+      'new-mexico',
+      'oregon',
+      'utah',
+      'wyoming',
+      'arkansas',
+      'iowa',
+      'kansas',
+      'missouri',
+      'nebraska',
+      'oklahoma',
+      'south-dakota',
+      'louisiana',
+      'texas',
+      'connecticut',
+      'new-hampshire',
+      'rhode-island',
+      'vermont',
+      'alabama',
+      'florida',
+      'georgia',
+      'mississippi',
+      'south-carolina',
+      'illinois',
+      'indiana',
+      'kentucky',
+      'north-carolina',
+      'ohio',
+      'tennessee',
+      'virginia',
+      'wisconsin',
+      'west-virginia',
+      'delaware',
+      'district-of-columbia',
+      'maryland',
+      'new-jersey',
+      'new-york',
+      'pennsylvania',
+      'maine',
+      'michigan',
+      'alaska',
+    ]);
+    setBlueStates([]);
+    setRedStates([]);
+    setText({
+      name: '',
+      points: '',
+    });
+  };
+
   const handleHover = (e) => {
     const hoveredState = e.target.id;
     const points = e.target.dataset.points;
@@ -109,10 +174,7 @@ function App() {
     let points = Number(e.target.dataset.points);
     let clicked = e.target.dataset.party;
     let selected = selectedParty;
-    console.log(state);
-    console.log(points);
-    console.log(clicked);
-    console.log(selectedParty);
+
     switch (selected) {
       case 'blue':
         //BLUE SELECTED: CLICK NONE --> ADD POINTS TO BLUE + ADD STATE TO BLUE + SUBTRACT POINTS FROM NONE + REMOVE STATE FROM NONE
@@ -194,6 +256,7 @@ function App() {
         red={redPts}
         none={nonePts}
         text={text}
+        handleReset={handleReset}
       />
       <Map
         states={states}

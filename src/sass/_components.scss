@@ -124,6 +124,14 @@
 
       padding: 1.5rem 2rem;
     }
+
+    &--reset {
+      grid-column: 1 / -1;
+      justify-self: center;
+      background-color: $color-grey;
+
+      padding: 1.5rem 2rem;
+    }
   }
 
   &__footer {
