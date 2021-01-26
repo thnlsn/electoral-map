@@ -15,8 +15,12 @@
 .settings {
   display: grid;
   grid-template-columns: [full-start blue-start] 1fr [blue-end red-start] 1fr [red-end full-end];
+  grid-template-rows: min-content;
   padding: 4rem 4rem;
   column-gap: 4rem;
+  row-gap: 2rem;
+
+  background-color: $color-gold-light;
 
   align-items: start;
 }

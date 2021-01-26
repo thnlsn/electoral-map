@@ -65,12 +65,6 @@
   }
 }
 
-/* @keyframes outlineIn {
-  from {
-    outline: ;
-  }
-} */
-
 .settings {
   border-right: 2px solid $color-gold;
 
@@ -108,7 +102,7 @@
     // Unselected button styles
     &--unselected {
       outline: 0px solid transparent;
-      border: 1rem solid $color-grey-light;
+      border: 1rem solid $color-gold-light;
       &:hover {
         outline: 1rem solid $color-gold;
         // box-shadow: 0 2.5rem 4rem rgba($color-black, 0.5);
@@ -124,8 +118,11 @@
     }
 
     &--population {
-      outline-color: black;
-      background-color: $color-grey;
+      grid-column: 1 / -1;
+      justify-self: center;
+      background-color: $color-gold-dark;
+
+      padding: 1rem 2rem;
     }
   }
 }
@@ -155,7 +152,7 @@
     }
 
     &--visualize {
-      stroke: #988c5b;
+      stroke: $color-gold-dark;
     }
   }
 
