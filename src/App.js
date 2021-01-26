@@ -161,13 +161,19 @@ function App() {
         //NONE SELECTED: CLICK BLUE --> [ADD POINTS TO NONE + ADD STATE TO NONE + SUBTRACT POINTS FROM BLUE + REMOVE STATE FROM BLUE]
         //NONE SELECTED: CLICK RED --> {ADD POINTS TO NONE + ADD STATE TO NONE + SUBTRACT POINTS FROM RED + REMOVE STATE FROM RED}
         if (clicked === 'none') {
-          return;
+          // IF NONE, ADD TO BLUE AND REMOVE FROM NONE
+          setBluePts(bluePts + points);
+          setBlueStates([...blueStates, state]);
+          setNonePts(nonePts - points);
+          setNoneStates(noneStates.filter((noneState) => noneState !== state));
         } else if (clicked === 'blue') {
-          setNonePts(nonePts + points);
-          setNoneStates([...noneStates, state]);
+          // IF BLUE, ADD TO RED AND REMOVE FROM BLUE
+          setRedPts(redPts + points);
+          setRedStates([...redStates, state]);
           setBluePts(bluePts - points);
           setBlueStates(blueStates.filter((blueState) => blueState !== state));
         } else {
+          // IF RED, ADD TO NONE AND REMOVE FROM RED
           setNonePts(nonePts + points);
           setNoneStates([...noneStates, state]);
           setRedPts(redPts - points);
