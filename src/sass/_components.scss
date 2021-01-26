@@ -126,6 +126,10 @@
     }
   }
 
+  &__footer {
+    grid-column: 1 / -1;
+  }
+
   hr {
     grid-column: 1 / -1;
     border: 1px solid $color-gold;
@@ -163,10 +167,23 @@
       stroke: $color-font;
     }
   }
+}
 
-  /*   &__population {
-    opacity: calc(attr(data-points) / 100);
-  } */
+.socials {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-evenly;
+
+  &__icon {
+    transition: all 0.5s;
+    fill: #5b5437;
+    height: 3rem;
+    width: 3rem;
+
+    &:hover {
+      fill: #988c5b;
+    }
+  }
 }
 
 /* .states {

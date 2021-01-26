@@ -184,6 +184,8 @@ body {
       justify-self: center;
       background-color: #988c5b;
       padding: 1rem 2rem; }
+  .settings__footer {
+    grid-column: 1 / -1; }
   .settings hr {
     grid-column: 1 / -1;
     border: 1px solid #d9c882;
@@ -191,25 +193,33 @@ body {
     opacity: 1;
     margin: 1.5rem 0; }
 
-.map {
-  /*   &__population {
-    opacity: calc(attr(data-points) / 100);
-  } */ }
-  .map__state {
-    stroke-linejoin: round;
-    stroke-width: 0.971px;
-    transition: all 0.4s;
-    cursor: pointer; }
-    .map__state--default {
-      stroke: #988c5b; }
-      .map__state--default.blue:hover {
-        fill: rgba(62, 65, 251, 0.8); }
-      .map__state--default.red:hover {
-        fill: rgba(181, 60, 55, 0.8); }
-      .map__state--default.none:hover {
-        fill: rgba(217, 200, 130, 0.6); }
-    .map__state--visualize {
-      stroke: #5b5437; }
+.map__state {
+  stroke-linejoin: round;
+  stroke-width: 0.971px;
+  transition: all 0.4s;
+  cursor: pointer; }
+  .map__state--default {
+    stroke: #988c5b; }
+    .map__state--default.blue:hover {
+      fill: rgba(62, 65, 251, 0.8); }
+    .map__state--default.red:hover {
+      fill: rgba(181, 60, 55, 0.8); }
+    .map__state--default.none:hover {
+      fill: rgba(217, 200, 130, 0.6); }
+  .map__state--visualize {
+    stroke: #5b5437; }
+
+.socials {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-evenly; }
+  .socials__icon {
+    transition: all 0.5s;
+    fill: #5b5437;
+    height: 3rem;
+    width: 3rem; }
+    .socials__icon:hover {
+      fill: #988c5b; }
 
 /* .states {
   display: grid;

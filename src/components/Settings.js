@@ -1,5 +1,8 @@
 import React from 'react';
 
+import GitHub from './Icons/GitHubIcon';
+import LinkedIn from './Icons/LinkedInIcon';
+
 const Settings = ({
   handleChangeParty,
   handleVisualizePopulation,
@@ -61,7 +64,10 @@ const Settings = ({
       <hr />
       {/* Info */}
       <div className='settings__footer'>
-        <div>cp THomas Nelson</div>
+        <div className='socials'>
+          <GitHub />
+          <LinkedIn />
+        </div>
       </div>
     </div>
   );
