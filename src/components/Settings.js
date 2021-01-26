@@ -16,7 +16,7 @@ const Settings = ({
       {/* BLUE BUTTON */}
       <div
         onClick={handleChangeParty}
-        className={`settings__btn settings__btn--blue ${
+        className={`settings__btn settings__btn--blue unselectable ${
           party === 'blue'
             ? 'settings__btn--selected'
             : 'settings__btn--unselected'
@@ -27,7 +27,7 @@ const Settings = ({
       {/* RED BUTTON */}
       <div
         onClick={handleChangeParty}
-        className={`settings__btn settings__btn--red ${
+        className={`settings__btn settings__btn--red unselectable ${
           party === 'red'
             ? 'settings__btn--selected'
             : 'settings__btn--unselected'
@@ -38,7 +38,7 @@ const Settings = ({
 
       {/* VISUALIZE BUTTON */}
       <div
-        className={`settings__btn settings__btn--visualize ${
+        className={`settings__btn settings__btn--visualize unselectable ${
           visualize === true
             ? 'settings__btn--selected'
             : 'settings__btn--unselected'
@@ -50,7 +50,7 @@ const Settings = ({
 
       {/* RESET BUTTON */}
       <div
-        className={`settings__btn settings__btn--reset`}
+        className={`settings__btn settings__btn--reset unselectable`}
         onClick={handleReset}
       >
         Reset
@@ -79,8 +79,20 @@ const Settings = ({
       {/* Info */}
       <div className='settings__footer'>
         <div className='socials'>
-          <GitHub />
-          <LinkedIn />
+          <a
+            href='https://github.com/thnlsn/electoral-map'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            <GitHub />
+          </a>
+          <a
+            href='https://www.linkedin.com/in/thnlsn/'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            <LinkedIn />
+          </a>
         </div>
       </div>
     </div>
