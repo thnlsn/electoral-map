@@ -5,9 +5,7 @@ const Settings = ({
   handleVisualizePopulation,
   visualize,
   party,
-  blue,
-  red,
-  none,
+  text,
 }) => {
   return (
     <div className='settings'>
@@ -46,7 +44,11 @@ const Settings = ({
       </div>
 
       <hr />
-      {/*  */}
+      {/* Info */}
+      <div className='settings__info'>
+        <div className='settings__heading'>{text.name}</div>
+        <div className='settings__text'>{text.points}</div>
+      </div>
     </div>
   );
 };

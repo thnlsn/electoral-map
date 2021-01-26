@@ -6,12 +6,24 @@
 }
 
 .settings {
+  font-family: $header-font;
+  color: $color-font;
+
   &__btn {
     font-family: $default-font;
     line-height: 1;
     font-weight: 700;
     color: rgba($color: $color-white, $alpha: 0.8);
     text-align: center;
+  }
+
+  &__text {
+    font-size: 3rem;
+  }
+  &__heading {
+    text-transform: capitalize;
+    font-size: 3rem;
+    font-weight: 600;
   }
 }
 

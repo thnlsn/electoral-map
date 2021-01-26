@@ -131,7 +131,7 @@
     border: 1px solid $color-gold;
     border-radius: 50%;
     opacity: 1;
-    margin: auto 0;
+    margin: 1.5rem 0;
   }
 }
 
@@ -147,7 +147,7 @@
     cursor: pointer;
 
     &--default {
-      stroke: $color-gold;
+      stroke: $color-gold-dark;
       &.blue:hover {
         fill: rgba($color: $color-blue, $alpha: 0.8);
       }
@@ -160,7 +160,7 @@
     }
 
     &--visualize {
-      stroke: $color-gold-dark;
+      stroke: $color-font;
     }
   }
 

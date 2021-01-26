@@ -32,12 +32,21 @@
   font-weight: 700;
   color: rgba(255, 255, 255, 0.7); }
 
-.settings__btn {
-  font-family: "Fauna One", serif;
-  line-height: 1;
-  font-weight: 700;
-  color: rgba(255, 255, 255, 0.8);
-  text-align: center; }
+.settings {
+  font-family: "Playfair Display", serif;
+  color: #5b5437; }
+  .settings__btn {
+    font-family: "Fauna One", serif;
+    line-height: 1;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center; }
+  .settings__text {
+    font-size: 3rem; }
+  .settings__heading {
+    text-transform: capitalize;
+    font-size: 3rem;
+    font-weight: 600; }
 
 .map {
   font-family: "Fauna One", serif;
@@ -176,7 +185,7 @@ body {
     border: 1px solid #d9c882;
     border-radius: 50%;
     opacity: 1;
-    margin: auto 0; }
+    margin: 1.5rem 0; }
 
 .map {
   /*   &__population {
@@ -188,7 +197,7 @@ body {
     transition: all 0.4s;
     cursor: pointer; }
     .map__state--default {
-      stroke: #d9c882; }
+      stroke: #988c5b; }
       .map__state--default.blue:hover {
         fill: rgba(62, 65, 251, 0.8); }
       .map__state--default.red:hover {
@@ -196,7 +205,7 @@ body {
       .map__state--default.none:hover {
         fill: rgba(217, 200, 130, 0.6); }
     .map__state--visualize {
-      stroke: #988c5b; }
+      stroke: #5b5437; }
 
 /* .states {
   display: grid;

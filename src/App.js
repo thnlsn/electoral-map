@@ -75,11 +75,14 @@ function App() {
 
   const [hovered, setHovered] = useState('');
 
+  const [text, setText] = useState({
+    name: 'asdf',
+    points: 14,
+  });
+
   const handleHover = (e) => {
     const hoveredState = e.target.id;
     setHovered(hoveredState);
-
-    console.log(hoveredState);
   };
   const handleHoverExit = () => {
     setHovered('');
@@ -179,6 +182,7 @@ function App() {
         blue={bluePts}
         red={redPts}
         none={nonePts}
+        text={text}
       />
       <Map
         states={states}
