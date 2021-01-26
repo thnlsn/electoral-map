@@ -76,13 +76,18 @@ function App() {
   const [hovered, setHovered] = useState('');
 
   const [text, setText] = useState({
-    name: 'asdf',
-    points: 14,
+    name: '',
+    points: '',
   });
 
   const handleHover = (e) => {
     const hoveredState = e.target.id;
+    const points = e.target.dataset.points;
     setHovered(hoveredState);
+    setText({
+      name: hoveredState.replace(/-/g, ' '), // Replace hyphens with spaces
+      points: points,
+    });
   };
   const handleHoverExit = () => {
     setHovered('');

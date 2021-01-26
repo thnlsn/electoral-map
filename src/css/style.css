@@ -82,13 +82,17 @@ body {
 .settings {
   display: grid;
   grid-template-columns: [full-start blue-start] 1fr [blue-end red-start] 1fr [red-end full-end];
-  grid-template-rows: min-content;
+  grid-template-rows: min-content min-content min-content min-content min-content 1fr;
   grid-auto-rows: min-content;
   padding: 4rem 4rem;
   column-gap: 4rem;
   row-gap: 2rem;
   background-color: #fbfaf3;
   align-items: start; }
+  .settings__info {
+    grid-column: 1 / -1; }
+  .settings__footer {
+    margin-top: auto; }
 
 .map-container {
   height: 100%;

@@ -46,8 +46,22 @@ const Settings = ({
       <hr />
       {/* Info */}
       <div className='settings__info'>
+        <div className='settings__paragraph'>Select your chosen color and</div>
+      </div>
+
+      <hr />
+      {/* Info */}
+      <div className='settings__info'>
         <div className='settings__heading'>{text.name}</div>
-        <div className='settings__text'>{text.points}</div>
+        <div className='settings__text'>
+          {text.points ? `Points: ${text.points}` : ''}
+        </div>
+      </div>
+
+      <hr />
+      {/* Info */}
+      <div className='settings__footer'>
+        <div>cp THomas Nelson</div>
       </div>
     </div>
   );
