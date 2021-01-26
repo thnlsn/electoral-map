@@ -43,6 +43,8 @@
     text-align: center; }
   .settings__text {
     font-size: 3rem; }
+  .settings__paragraph {
+    font-size: 2.2rem; }
   .settings__heading {
     text-transform: capitalize;
     font-size: 3rem;
@@ -179,10 +181,10 @@ body {
         transition: 0.25s outline 0s cubic-bezier(0.83, 0.23, 1, 0.25), 0.2 border 0.5s;
         outline: 1px solid #d9c882;
         border: 1rem solid #d9c882; }
-    .settings__btn--population {
+    .settings__btn--visualize {
       grid-column: 1 / -1;
       justify-self: center;
-      background-color: #988c5b;
+      background-color: #5b5437;
       padding: 1rem 2rem; }
   .settings__footer {
     grid-column: 1 / -1; }

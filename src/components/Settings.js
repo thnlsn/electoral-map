@@ -36,7 +36,7 @@ const Settings = ({
       </div>
       {/* VISUALIZE BUTTON */}
       <div
-        className={`settings__btn settings__btn--population ${
+        className={`settings__btn settings__btn--visualize ${
           visualize === true
             ? 'settings__btn--selected'
             : 'settings__btn--unselected'
@@ -49,7 +49,11 @@ const Settings = ({
       <hr />
       {/* Info */}
       <div className='settings__info'>
-        <div className='settings__paragraph'>Select your chosen color and</div>
+        <div className='settings__paragraph'>
+          Select a color and click on states to visualize and calulate a mock
+          election. You can also visualize the weight of points each state
+          carries.
+        </div>
       </div>
 
       <hr />

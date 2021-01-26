@@ -117,10 +117,10 @@
       }
     }
 
-    &--population {
+    &--visualize {
       grid-column: 1 / -1;
       justify-self: center;
-      background-color: $color-gold-dark;
+      background-color: $color-font;
 
       padding: 1rem 2rem;
     }
