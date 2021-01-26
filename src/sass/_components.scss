@@ -77,7 +77,6 @@
   &__btn {
     cursor: pointer;
     padding: 1rem;
-    background-color: $color-grey;
 
     transition: all 0.2s;
 
@@ -108,6 +107,7 @@
 
     // Unselected button styles
     &--unselected {
+      outline: 0px solid transparent;
       border: 1rem solid $color-grey-light;
       &:hover {
         outline: 1rem solid $color-gold;
@@ -117,10 +117,15 @@
       &:active {
         transition: 0.25s outline 0s cubic-bezier(0.83, 0.23, 1, 0.25),
           0.2 border 0.5s;
-        outline: 0rem solid $color-gold;
+        outline: 1px solid $color-gold;
 
         border: 1rem solid $color-gold; // Because we want to see the border change right as the outline is lessening
       }
+    }
+
+    &--population {
+      outline-color: black;
+      background-color: $color-grey;
     }
   }
 }
@@ -129,7 +134,6 @@
   // transform: translateX(-5.5%);
 
   &__state {
-    stroke: $color-gold;
     stroke-linejoin: round;
     stroke-width: 0.971px;
 
@@ -137,14 +141,21 @@
 
     cursor: pointer;
 
-    &.blue:hover {
-      fill: rgba($color: $color-blue, $alpha: 0.8);
+    &--default {
+      stroke: $color-gold;
+      &.blue:hover {
+        fill: rgba($color: $color-blue, $alpha: 0.8);
+      }
+      &.red:hover {
+        fill: rgba($color: $color-red, $alpha: 0.8);
+      }
+      &.none:hover {
+        fill: rgba($color: $color-gold, $alpha: 0.6);
+      }
     }
-    &.red:hover {
-      fill: rgba($color: $color-red, $alpha: 0.8);
-    }
-    &.none:hover {
-      fill: rgba($color: $color-gold, $alpha: 0.6);
+
+    &--visualize {
+      stroke: #988c5b;
     }
   }
 

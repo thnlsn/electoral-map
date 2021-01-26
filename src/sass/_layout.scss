@@ -3,7 +3,7 @@
   grid-template-columns: [full-start settings-start] 1fr [settings-end map-start] 4fr [map-end /* legend-start ] 1fr[ legend-end */ full-end];
   grid-template-rows: min-content;
   height: 100vh;
-  background-color: $color-grey-light;
+  background-color: $color-white;
 
   column-gap: 2rem;
 }

@@ -12,16 +12,16 @@
   fill: #ffeb9931; }
 
 .blue {
-  fill: #282cfa; }
+  fill: #3e41fb; }
 
 .red {
-  fill: #ad2621; }
+  fill: #b53c37; }
 
 .blue.hovered {
-  fill: rgba(40, 44, 250, 0.8); }
+  fill: rgba(62, 65, 251, 0.8); }
 
 .red.hovered {
-  fill: rgba(173, 38, 33, 0.8); }
+  fill: rgba(181, 60, 55, 0.8); }
 
 .none.hovered {
   fill: rgba(217, 200, 130, 0.8); }
@@ -64,7 +64,7 @@ body {
   grid-template-columns: [full-start settings-start] 1fr [settings-end map-start] 4fr [map-end full-end];
   grid-template-rows: min-content;
   height: 100vh;
-  background-color: #f9f9f9;
+  background-color: #fff;
   column-gap: 2rem; }
 
 .bar {
@@ -117,13 +117,13 @@ body {
     top: 47.5%; }
   .bar__blue {
     position: relative;
-    background-color: #282cfa; }
+    background-color: #3e41fb; }
     .bar__blue::after {
       transform: translate(-50%, -50%);
       right: 25%; }
   .bar__red {
     position: relative;
-    background-color: #ad2621; }
+    background-color: #b53c37; }
     .bar__red::after {
       transform: translate(50%, -50%);
       left: 25%; }
@@ -143,47 +143,53 @@ body {
   .settings__btn {
     cursor: pointer;
     padding: 1rem;
-    background-color: #9e9ea0;
     transition: all 0.2s; }
     .settings__btn--blue {
-      background-color: #282cfa; }
+      background-color: #3e41fb; }
       .settings__btn--blue:hover {
-        background-color: rgba(40, 44, 250, 0.8); }
+        background-color: rgba(62, 65, 251, 0.8); }
     .settings__btn--red {
-      background-color: #ad2621; }
+      background-color: #b53c37; }
       .settings__btn--red:hover {
-        background-color: rgba(173, 38, 33, 0.8); }
+        background-color: rgba(181, 60, 55, 0.8); }
     .settings__btn--selected {
       border: 1rem solid #d9c882; }
       .settings__btn--selected:hover {
         outline: none;
         z-index: 20; }
     .settings__btn--unselected {
+      outline: 0px solid transparent;
       border: 1rem solid #f9f9f9; }
       .settings__btn--unselected:hover {
         outline: 1rem solid #d9c882;
         z-index: 20; }
       .settings__btn--unselected:active {
         transition: 0.25s outline 0s cubic-bezier(0.83, 0.23, 1, 0.25), 0.2 border 0.5s;
-        outline: 0rem solid #d9c882;
+        outline: 1px solid #d9c882;
         border: 1rem solid #d9c882; }
+    .settings__btn--population {
+      outline-color: black;
+      background-color: #9e9ea0; }
 
 .map {
   /*   &__population {
     opacity: calc(attr(data-points) / 100);
   } */ }
   .map__state {
-    stroke: #d9c882;
     stroke-linejoin: round;
     stroke-width: 0.971px;
     transition: all 0.4s;
     cursor: pointer; }
-    .map__state.blue:hover {
-      fill: rgba(40, 44, 250, 0.8); }
-    .map__state.red:hover {
-      fill: rgba(173, 38, 33, 0.8); }
-    .map__state.none:hover {
-      fill: rgba(217, 200, 130, 0.6); }
+    .map__state--default {
+      stroke: #d9c882; }
+      .map__state--default.blue:hover {
+        fill: rgba(62, 65, 251, 0.8); }
+      .map__state--default.red:hover {
+        fill: rgba(181, 60, 55, 0.8); }
+      .map__state--default.none:hover {
+        fill: rgba(217, 200, 130, 0.6); }
+    .map__state--visualize {
+      stroke: #988c5b; }
 
 /* .states {
   display: grid;
