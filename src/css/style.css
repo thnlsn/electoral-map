@@ -200,6 +200,8 @@ body {
       justify-self: center;
       background-color: #5b5437;
       padding: 1.5rem 2rem; }
+      .settings__btn--visualize:hover {
+        background-color: rgba(91, 84, 55, 0.8); }
     .settings__btn--reset {
       grid-column: 1 / -1;
       justify-self: center;

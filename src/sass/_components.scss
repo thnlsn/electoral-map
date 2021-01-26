@@ -123,6 +123,10 @@
       background-color: $color-font;
 
       padding: 1.5rem 2rem;
+
+      &:hover {
+        background-color: rgba($color: $color-font, $alpha: 0.8);
+      }
     }
 
     &--reset {
