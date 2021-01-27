@@ -1,10 +1,10 @@
 // RESPONSIVE BREAKPOINTS
 // ----------------------- (x / 16) where x = desired breakpoint in px
-$bp-largest: 93.75em; // ---- 1400px
-$bp-large: 75em; // ---- 1200px
-$bp-medium: 62.5em; // --- 1000px
-$bp-small: 50em; // -- 800px
-$bp-smallest: 37.5em; // ---- 600px
+// $bp-largest: 93.75em; // ---- 1400px
+// $bp-large: 75em; // ---- 1200px
+$bp-large: 62.5em; // --- 1000px
+$bp-medium: 50em; // -- 800px
+$bp-small: 37.5em; // ---- 600px
 
 $bp-phone-large: 31.25em; // ---- 500px
 $bp-phone-small: 25em; // ---- 400px
@@ -13,10 +13,10 @@ html {
   box-sizing: border-box; // Border-box is always good
   font-size: 62.5%; // 1rem = 10px, 10px / 16px = 62.5%
 
-  @media only screen and (max-width: $bp-medium) {
+  @media only screen and (max-width: $bp-large) {
     font-size: 56.5%;
   }
-  @media only screen and (max-width: $bp-small) {
+  @media only screen and (max-width: $bp-medium) {
     font-size: 52.5%;
   }
 }

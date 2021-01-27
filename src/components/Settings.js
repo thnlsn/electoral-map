@@ -56,9 +56,9 @@ const Settings = ({
         Reset
       </div>
 
-      <hr />
+      <hr id='1' />
       {/* Info */}
-      <div className='settings__info'>
+      <div className='settings__description'>
         <div className='settings__paragraph'>
           Interact with the map and calculate a mock election. You can also
           visualize the point distribution.

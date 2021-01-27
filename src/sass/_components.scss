@@ -78,12 +78,20 @@
 
     // Normal button styles
     &--blue {
+      @media only screen and (max-width: $bp-large) {
+        grid-column: 1 / 2;
+      }
+
       background-color: $color-blue;
       &:hover {
         background-color: rgba($color: $color-blue, $alpha: 0.8);
       }
     }
     &--red {
+      @media only screen and (max-width: $bp-large) {
+        grid-column: 1 / 2;
+      }
+
       background-color: $color-red;
       &:hover {
         background-color: rgba($color: $color-red, $alpha: 0.8);
@@ -121,6 +129,13 @@
 
     &--visualize {
       grid-column: 1 / -1;
+
+      @media only screen and (max-width: $bp-large) {
+        grid-row: 1 / 2;
+        grid-column: 2 / 3;
+        padding: 1rem;
+      }
+
       justify-self: center;
       background-color: $color-font;
 
@@ -133,6 +148,12 @@
 
     &--reset {
       grid-column: 1 / -1;
+
+      @media only screen and (max-width: $bp-large) {
+        grid-row: 2 / 3;
+        grid-column: 2 / 3;
+      }
+
       justify-self: center;
       border: 2px solid $color-gold-dark;
       color: $color-gold-dark;
@@ -154,6 +175,12 @@
 
   &__footer {
     grid-column: 1 / -1;
+
+    @media only screen and (max-width: $bp-large) {
+      grid-column: 5 / 6;
+      grid-row: 1 / 3;
+      width: 5rem;
+    }
   }
 
   hr {
@@ -161,6 +188,14 @@
     border: 1px solid $color-gold;
     border-radius: 50%;
     opacity: 1;
+
+    @media only screen and (max-width: $bp-large) {
+      // border: 1px solid $color-gold;
+      // width: 2px;
+      // height: 100%;
+
+      display: none;
+    }
   }
 }
 

@@ -4,6 +4,13 @@
   grid-template-rows: min-content;
   height: 100vh;
   background-color: $color-white;
+
+  @media only screen and (max-width: $bp-large) {
+    grid-template-columns: [full-start settings-start] 1fr [settings-end map-start] 4fr [map-end /* legend-start ] 1fr[ legend-end */ full-end];
+    grid-template-rows: min-content;
+    height: 100vh;
+    background-color: $color-white;
+  }
 }
 
 .bar {
@@ -12,7 +19,7 @@
 
 .settings {
   display: grid;
-  grid-template-columns: [full-start blue-start] 1fr [blue-end red-start] 1fr [red-end full-end];
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: min-content min-content min-content min-content min-content min-content 1fr;
   grid-auto-rows: min-content;
   padding: 3rem 3rem 2rem 3rem;
@@ -23,8 +30,33 @@
 
   align-items: start;
 
+  @media only screen and (max-width: $bp-large) {
+    grid-column: full-start / full-end;
+
+    column-gap: 2rem;
+    row-gap: 0rem;
+    grid-template-rows: 1fr;
+    grid-template-columns: min-content min-content min-content min-content min-content;
+
+    align-items: center;
+  }
+
+  &__description {
+    grid-column: 1 / -1;
+
+    @media only screen and (max-width: $bp-large) {
+      grid-column: 3 / 4;
+      grid-row: 1 / 3;
+    }
+  }
+
   &__info {
     grid-column: 1 / -1;
+
+    @media only screen and (max-width: $bp-large) {
+      grid-column: 4 / 5;
+      grid-row: 1 / 3;
+    }
   }
 
   &__footer {
@@ -37,6 +69,10 @@
   width: 100%;
   padding: 3rem 2.5rem 2.1rem 2.5rem;
   overflow: hidden;
+
+  @media only screen and (max-width: $bp-large) {
+    grid-column: full-start / full-end;
+  }
 }
 
 /* .map__state-small {
