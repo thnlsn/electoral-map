@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/electoral-map/static/css/main.54f8b98c.chunk.css",
+    "main.js": "/electoral-map/static/js/main.231f9221.chunk.js",
+    "main.js.map": "/electoral-map/static/js/main.231f9221.chunk.js.map",
+    "runtime-main.js": "/electoral-map/static/js/runtime-main.422c4060.js",
+    "runtime-main.js.map": "/electoral-map/static/js/runtime-main.422c4060.js.map",
+    "static/js/2.fd6f1a5c.chunk.js": "/electoral-map/static/js/2.fd6f1a5c.chunk.js",
+    "static/js/2.fd6f1a5c.chunk.js.map": "/electoral-map/static/js/2.fd6f1a5c.chunk.js.map",
+    "index.html": "/electoral-map/index.html",
+    "precache-manifest.edde4596696e215b6f3d56e8d213702b.js": "/electoral-map/precache-manifest.edde4596696e215b6f3d56e8d213702b.js",
+    "service-worker.js": "/electoral-map/service-worker.js",
+    "static/css/main.54f8b98c.chunk.css.map": "/electoral-map/static/css/main.54f8b98c.chunk.css.map",
+    "static/js/2.fd6f1a5c.chunk.js.LICENSE.txt": "/electoral-map/static/js/2.fd6f1a5c.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.422c4060.js",
+    "static/js/2.fd6f1a5c.chunk.js",
+    "static/css/main.54f8b98c.chunk.css",
+    "static/js/main.231f9221.chunk.js"
+  ]
+}
