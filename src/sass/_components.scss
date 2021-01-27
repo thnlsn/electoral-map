@@ -180,9 +180,6 @@
     }
   }
 
-  &__footer {
-  }
-
   hr {
     grid-column: 1 / -1;
     border: 1px solid $color-gold;
@@ -201,6 +198,10 @@
 
 .map {
   // transform: translateX(-5.5%);
+  @media only screen and (max-width: $bp-small) {
+    height: 150%;
+    width: 150%;
+  }
 
   &__state {
     stroke-linejoin: round;
