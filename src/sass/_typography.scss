@@ -17,17 +17,22 @@
 
   &__btn {
     font-family: $default-font;
+    font-size: 2.2rem;
     line-height: 1;
-    font-weight: 700;
+    font-weight: 600;
     color: rgba($color: $color-white, $alpha: 0.8);
     text-align: center;
+
+    &--reset {
+      font-weight: 200;
+    }
   }
 
   &__text {
     font-size: 3rem;
   }
   &__paragraph {
-    font-size: 2.2rem;
+    font-size: 2rem;
   }
   &__heading {
     text-transform: capitalize;

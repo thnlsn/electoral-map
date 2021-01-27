@@ -138,7 +138,7 @@
       color: $color-gold-dark;
 
       padding: 1rem 1.5rem;
-      margin: 1rem 0;
+      margin: 0.5rem 0 1rem 0;
 
       &:hover {
         background-color: $color-gold;
@@ -161,7 +161,6 @@
     border: 1px solid $color-gold;
     border-radius: 50%;
     opacity: 1;
-    margin: 1rem 0;
   }
 }
 

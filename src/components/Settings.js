@@ -45,7 +45,7 @@ const Settings = ({
         }`}
         onClick={handleVisualizePopulation}
       >
-        Visualize Points
+        Visualize
       </div>
 
       {/* RESET BUTTON */}
@@ -60,9 +60,8 @@ const Settings = ({
       {/* Info */}
       <div className='settings__info'>
         <div className='settings__paragraph'>
-          Select a color and click on states to visualize and calulate a mock
-          election. You can also visualize the weight of points each state
-          carries.
+          Interact with the map and calculate a mock election. You can also
+          visualize the point distribution.
         </div>
       </div>
 
