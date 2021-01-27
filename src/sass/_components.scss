@@ -6,23 +6,25 @@
   // The min-content columns will be the red/blue with the middle being the leftover
   position: relative;
 
+  // Bar middle line indicator
   &::before {
     content: '';
     position: absolute;
     top: 0;
     left: 50%;
 
-    width: 1px;
+    width: 2px;
     height: 140%;
-    background-color: $color-gold;
+    border-radius: 10px;
+    background-color: currentColor; // So that it matches the text color when a winner is determined
     transform: translateX(-50%);
     z-index: 0;
   }
 
+  // Bar text
   &::after {
     content: attr(data-winner);
     position: absolute;
-    color: $color-gold;
     font-size: 1.6rem;
     top: 145%;
     left: 50%;
@@ -201,12 +203,23 @@
   &__icon {
     transition: all 0.5s;
     fill: #5b5437;
-    height: 3rem;
-    width: 3rem;
+    height: 3.5rem;
+    width: 3.5rem;
+
+    z-index: 100;
 
     &:hover {
       fill: #988c5b;
     }
+  }
+
+  a {
+    height: 3.5rem;
+    position: relative;
+
+    z-index: 1;
+
+    transition: all 0.5s;
   }
 }
 

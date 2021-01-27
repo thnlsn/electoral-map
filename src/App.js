@@ -7,6 +7,7 @@ import Map from './components/UnitedStates';
 import States from './components/States';
 
 import statesOld from './statesOld';
+import map from './map';
 import states from './states';
 
 function App() {
@@ -259,7 +260,7 @@ function App() {
         handleReset={handleReset}
       />
       <Map
-        states={states}
+        states={map}
         handleClick={handleClick}
         visualize={visualizePopulation}
         blueStates={blueStates}

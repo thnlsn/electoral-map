@@ -4,8 +4,6 @@
   grid-template-rows: min-content;
   height: 100vh;
   background-color: $color-white;
-
-  column-gap: 2rem;
 }
 
 .bar {
@@ -37,7 +35,7 @@
 .map-container {
   height: 100%;
   width: 100%;
-  padding: 2rem 0rem 2.1rem 2.5rem;
+  padding: 4rem 0rem 2.1rem 2.5rem;
   overflow: hidden;
 }
 

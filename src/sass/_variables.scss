@@ -3,10 +3,15 @@
   --color-black: #000;
 }
 
-$color-blue: #282cfa;
-$color-red: #ad2621;
-$color-blue: #3e41fb;
-$color-red: #b53c37;
+// $color-blue: #282cfa;
+// $color-red: #ad2621;
+// $color-blue: #3e41fb;
+// $color-red: #b53c37;
+$color-blue: #5154fb;
+$color-red: #bc504b;
+
+$color-blue-light: #ececff;
+$color-red-light: #f8eceb;
 
 $color-green: #57d985;
 
@@ -30,7 +35,8 @@ $header-font: 'Playfair Display', serif;
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-.map #district-of-columbia {
+// first-of-type so that the enlarged version doesn't have a thin stroke
+.map #district-of-columbia:first-of-type {
   stroke-width: 0.1px !important;
 }
 

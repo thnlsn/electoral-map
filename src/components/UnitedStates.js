@@ -73,6 +73,21 @@ function UnitedStates({
             }
           ></path>
         ))}
+        <path
+          className='map__line'
+          id='line-rhode-island'
+          d='M794.244 132.945L801.244 163.945'
+        ></path>
+        <path
+          className='map__line'
+          id='line-delaware'
+          d='M761.037 204.753L788.037 208.753'
+        ></path>
+        <path
+          className='map__line'
+          id='line-district-of-columbia'
+          d='M731.214 207.871L789.214 303.871'
+        ></path>
       </g>
     </svg>
   );
