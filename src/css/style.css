@@ -40,6 +40,27 @@
   user-select: none;
   /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */ }
 
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+  @media only screen and (max-width: 62.5em) {
+    html {
+      font-size: 56.5%; } }
+  @media only screen and (max-width: 50em) {
+    html {
+      font-size: 52.5%; } }
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+body {
+  font-size: 2.4rem;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+
 .bar {
   font-family: "Fauna One", serif;
   line-height: 1;
@@ -68,33 +89,15 @@
     text-transform: capitalize;
     font-size: 3rem;
     font-weight: 600; }
+    @media only screen and (max-width: 62.5em) {
+      .settings__heading {
+        font-size: 2.4rem; } }
 
 .map {
   font-family: "Fauna One", serif;
   line-height: 1;
   font-weight: 700;
   color: rgba(0, 0, 0, 0.7); }
-
-html {
-  box-sizing: border-box;
-  font-size: 62.5%; }
-  @media only screen and (max-width: 62.5em) {
-    html {
-      font-size: 56.5%; } }
-  @media only screen and (max-width: 50em) {
-    html {
-      font-size: 52.5%; } }
-
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: inherit; }
-
-body {
-  font-size: 2.4rem;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
 
 .App {
   display: grid;
@@ -105,7 +108,7 @@ body {
   @media only screen and (max-width: 62.5em) {
     .App {
       grid-template-columns: [full-start settings-start] 1fr [settings-end map-start] 4fr [map-end full-end];
-      grid-template-rows: min-content;
+      grid-template-rows: min-content 1fr;
       height: 100vh;
       background-color: #fff; } }
 
@@ -125,17 +128,19 @@ body {
   @media only screen and (max-width: 62.5em) {
     .settings {
       grid-column: full-start / full-end;
+      grid-row: 3 / 4;
       column-gap: 2rem;
-      row-gap: 0rem;
-      grid-template-rows: 1fr;
-      grid-template-columns: min-content min-content min-content min-content min-content;
+      row-gap: 1.5rem;
+      grid-template-rows: 1fr 1fr;
+      grid-template-columns: min-content 0.8fr 0.8fr 1fr min-content;
       align-items: center; } }
   .settings__description {
     grid-column: 1 / -1; }
     @media only screen and (max-width: 62.5em) {
       .settings__description {
-        grid-column: 3 / 4;
-        grid-row: 1 / 3; } }
+        grid-column: 2 / 4;
+        grid-row: 1 / 2;
+        margin-left: 1rem; } }
   .settings__info {
     grid-column: 1 / -1; }
     @media only screen and (max-width: 62.5em) {
@@ -143,7 +148,13 @@ body {
         grid-column: 4 / 5;
         grid-row: 1 / 3; } }
   .settings__footer {
-    margin-top: auto; }
+    margin-top: auto;
+    grid-column: 1 / -1; }
+    @media only screen and (max-width: 62.5em) {
+      .settings__footer {
+        grid-column: 5 / 6;
+        grid-row: 1 / 3;
+        margin-top: 0; } }
 
 .map-container {
   height: 100%;
@@ -153,6 +164,14 @@ body {
   @media only screen and (max-width: 62.5em) {
     .map-container {
       grid-column: full-start / full-end; } }
+
+.socials {
+  display: flex;
+  justify-content: space-evenly; }
+  @media only screen and (max-width: 62.5em) {
+    .socials {
+      display: grid;
+      row-gap: 3rem; } }
 
 /* .map__state-small {
   position: absolute;
@@ -206,6 +225,10 @@ body {
 
 .settings {
   border-right: 2px solid #d9c882; }
+  @media only screen and (max-width: 62.5em) {
+    .settings {
+      border-right: none;
+      border-top: 2px solid #d9c882; } }
   .settings__btn {
     cursor: pointer;
     padding: 1rem;
@@ -246,9 +269,10 @@ body {
       padding: 1.5rem 2rem; }
       @media only screen and (max-width: 62.5em) {
         .settings__btn--visualize {
-          grid-row: 1 / 2;
           grid-column: 2 / 3;
-          padding: 1rem; } }
+          grid-row: 2 / 3;
+          padding: 1rem;
+          justify-self: end; } }
       .settings__btn--visualize:hover {
         background-color: rgba(91, 84, 55, 0.8); }
     .settings__btn--reset {
@@ -261,7 +285,8 @@ body {
       @media only screen and (max-width: 62.5em) {
         .settings__btn--reset {
           grid-row: 2 / 3;
-          grid-column: 2 / 3; } }
+          grid-column: 3 / 4;
+          justify-self: start; } }
       .settings__btn--reset:hover {
         background-color: #d9c882;
         color: #fbfaf3; }
@@ -269,13 +294,6 @@ body {
         background-color: #988c5b;
         color: #fbfaf3;
         border-color: #5b5437; }
-  .settings__footer {
-    grid-column: 1 / -1; }
-    @media only screen and (max-width: 62.5em) {
-      .settings__footer {
-        grid-column: 5 / 6;
-        grid-row: 1 / 3;
-        width: 5rem; } }
   .settings hr {
     grid-column: 1 / -1;
     border: 1px solid #d9c882;
@@ -306,9 +324,7 @@ body {
   stroke-width: 0.5px; }
 
 .socials {
-  cursor: pointer;
-  display: flex;
-  justify-content: space-evenly; }
+  cursor: pointer; }
   .socials__icon {
     transition: all 0.5s;
     fill: #5b5437;
