@@ -243,6 +243,10 @@ body {
   .map__state--visualize {
     stroke: #5b5437; }
 
+.map__line {
+  stroke: #5b5437;
+  stroke-width: 0.5px; }
+
 .socials {
   cursor: pointer;
   display: flex;

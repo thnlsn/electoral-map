@@ -193,6 +193,11 @@
       stroke: $color-font;
     }
   }
+
+  &__line {
+    stroke: $color-font;
+    stroke-width: 0.5px;
+  }
 }
 
 .socials {
