@@ -12,7 +12,7 @@
     grid-template-rows: min-content 3fr 1fr;
   }
   @media only screen and (max-width: $bp-small) {
-    grid-template-rows: min-content min-content 1fr;
+    grid-template-rows: min-content max-content 1fr;
     align-items: start;
   }
 }
@@ -24,7 +24,7 @@
   @media only screen and (max-width: $bp-medium) {
     height: 6vh;
   }
-  @media only screen and (max-width: $bp-small) {
+  @media only screen and (max-width: $bp-medium) {
     height: 8vh;
   }
 }
@@ -162,7 +162,8 @@
     grid-column: full-start / full-end;
   }
   @media only screen and (max-width: $bp-small) {
-    padding: 8rem 1rem 5.1rem 1rem;
+    height: 85vw;
+    padding: 3rem 1rem 2.1rem 1rem;
   }
 }
 
