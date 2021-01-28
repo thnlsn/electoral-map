@@ -56,7 +56,7 @@ const Settings = ({
         Reset
       </div>
 
-      <hr id='1' />
+      <hr id='hr--1' />
       {/* Info */}
       <div className='settings__description'>
         <div className='settings__paragraph'>
@@ -65,7 +65,7 @@ const Settings = ({
         </div>
       </div>
 
-      <hr />
+      <hr id='hr--2' />
       {/* Info */}
       <div className='settings__info'>
         <div className='settings__heading'>{text.name}</div>
@@ -74,7 +74,7 @@ const Settings = ({
         </div>
       </div>
 
-      <hr />
+      <hr id='hr--3' />
       {/* Info */}
       <div className='settings__footer'>
         <div className='socials'>
