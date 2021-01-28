@@ -17,7 +17,7 @@ Check it out on your phone or tablet, it's fully responsive!
 ### Built With
 
 #### Technologies
-- In addition to the obligatory HTML, CSS, and JavaScript...
+In addition to the obligatory HTML, CSS, and JavaScript...
 -   [React](https://reactjs.org/)
 -   [Sass](https://sass-lang.com/)
 
