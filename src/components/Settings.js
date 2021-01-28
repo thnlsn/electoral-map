@@ -68,9 +68,9 @@ const Settings = ({
       <hr id='hr--2' />
       {/* Info */}
       <div className='settings__info'>
-        <div className='settings__heading'>{text.name}</div>
+        <div className='settings__heading'>&#8203;{text.name}</div>
         <div className='settings__text'>
-          {text.points ? `Points: ${text.points}` : ''}
+          &#8203;{text.points ? `Points: ${text.points}` : ''}
         </div>
       </div>
 
