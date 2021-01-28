@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "35a27d3bf096ab73058e73a07f075823",
+    "revision": "e65d0d56541b80aecd5a519c0862451c",
     "url": "/electoral-map/index.html"
   },
   {
-    "revision": "b071d10136c3820ef048",
-    "url": "/electoral-map/static/css/main.e14575a3.chunk.css"
+    "revision": "98dad254d5a753b5c883",
+    "url": "/electoral-map/static/css/main.1892dcd4.chunk.css"
   },
   {
     "revision": "cb0a924cd5a44e9ce666",
@@ -16,7 +16,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/electoral-map/static/js/2.fd6f1a5c.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "b071d10136c3820ef048",
+    "revision": "98dad254d5a753b5c883",
     "url": "/electoral-map/static/js/main.c599eab9.chunk.js"
   },
   {

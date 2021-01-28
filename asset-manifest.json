@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/electoral-map/static/css/main.e14575a3.chunk.css",
+    "main.css": "/electoral-map/static/css/main.1892dcd4.chunk.css",
     "main.js": "/electoral-map/static/js/main.c599eab9.chunk.js",
     "main.js.map": "/electoral-map/static/js/main.c599eab9.chunk.js.map",
     "runtime-main.js": "/electoral-map/static/js/runtime-main.422c4060.js",
@@ -8,15 +8,15 @@
     "static/js/2.fd6f1a5c.chunk.js": "/electoral-map/static/js/2.fd6f1a5c.chunk.js",
     "static/js/2.fd6f1a5c.chunk.js.map": "/electoral-map/static/js/2.fd6f1a5c.chunk.js.map",
     "index.html": "/electoral-map/index.html",
-    "precache-manifest.89d5d0df0c4155870a6496d642c26612.js": "/electoral-map/precache-manifest.89d5d0df0c4155870a6496d642c26612.js",
+    "precache-manifest.cc013b79e3d6d5e27d7516cc2a46ac8e.js": "/electoral-map/precache-manifest.cc013b79e3d6d5e27d7516cc2a46ac8e.js",
     "service-worker.js": "/electoral-map/service-worker.js",
-    "static/css/main.e14575a3.chunk.css.map": "/electoral-map/static/css/main.e14575a3.chunk.css.map",
+    "static/css/main.1892dcd4.chunk.css.map": "/electoral-map/static/css/main.1892dcd4.chunk.css.map",
     "static/js/2.fd6f1a5c.chunk.js.LICENSE.txt": "/electoral-map/static/js/2.fd6f1a5c.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.422c4060.js",
     "static/js/2.fd6f1a5c.chunk.js",
-    "static/css/main.e14575a3.chunk.css",
+    "static/css/main.1892dcd4.chunk.css",
     "static/js/main.c599eab9.chunk.js"
   ]
 }
