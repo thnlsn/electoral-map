@@ -288,7 +288,7 @@ body {
     z-index: 0; }
     @media only screen and (max-width: 37.5em) {
       .bar::before {
-        height: 120%; } }
+        height: 130%; } }
   .bar::after {
     content: attr(data-winner);
     position: absolute;
@@ -301,8 +301,8 @@ body {
         font-size: 2.55rem; } }
     @media only screen and (max-width: 37.5em) {
       .bar::after {
-        font-size: 2.1rem;
-        top: 125%; } }
+        font-size: 2rem;
+        top: 135%; } }
   .bar__blue::after, .bar__red::after, .bar__none::after {
     content: attr(data-content);
     position: absolute;
