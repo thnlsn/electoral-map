@@ -253,6 +253,9 @@ body {
   background-color: #d9c882;
   display: grid;
   position: relative; }
+  @media only screen and (max-width: 37.5em) {
+    .bar {
+      font-size: 1.9rem; } }
   .bar::before {
     content: '';
     position: absolute;
@@ -283,13 +286,25 @@ body {
     background-color: #5154fb; }
     .bar__blue::after {
       transform: translate(-50%, -50%);
-      right: 25%; }
+      right: 10%; }
+      @media only screen and (max-width: 50em) {
+        .bar__blue::after {
+          right: 5%; } }
+      @media only screen and (max-width: 37.5em) {
+        .bar__blue::after {
+          right: -2%; } }
   .bar__red {
     position: relative;
     background-color: #bc504b; }
     .bar__red::after {
       transform: translate(50%, -50%);
-      left: 25%; }
+      left: 10%; }
+      @media only screen and (max-width: 50em) {
+        .bar__red::after {
+          left: 5%; } }
+      @media only screen and (max-width: 37.5em) {
+        .bar__red::after {
+          left: -2%; } }
   .bar__none {
     position: relative; }
     .bar__none::after {
@@ -368,7 +383,7 @@ body {
         .settings__btn--visualize {
           grid-column: 2 / 3;
           grid-row: 4 / 5;
-          justify-self: center; } }
+          justify-self: stretch; } }
       .settings__btn--visualize:hover {
         background-color: rgba(91, 84, 55, 0.8); }
     .settings__btn--reset {
@@ -392,7 +407,8 @@ body {
         .settings__btn--reset {
           grid-column: 2 / 3;
           grid-row: 5 / 6;
-          justify-self: center; } }
+          justify-self: center;
+          padding: 0.75rem 5.5rem; } }
       .settings__btn--reset:hover {
         background-color: #d9c882;
         color: #fbfaf3; }

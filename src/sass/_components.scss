@@ -5,6 +5,10 @@
   // The min-content columns will be the red/blue with the middle being the leftover
   position: relative;
 
+  @media only screen and (max-width: $bp-small) {
+    font-size: 1.9rem;
+  }
+
   // Bar middle line indicator
   &::before {
     content: '';
@@ -47,7 +51,13 @@
 
     &::after {
       transform: translate(-50%, -50%);
-      right: 25%;
+      right: 10%;
+      @media only screen and (max-width: $bp-medium) {
+        right: 5%;
+      }
+      @media only screen and (max-width: $bp-small) {
+        right: -2%;
+      }
     }
   }
   &__red {
@@ -56,7 +66,13 @@
 
     &::after {
       transform: translate(50%, -50%);
-      left: 25%;
+      left: 10%;
+      @media only screen and (max-width: $bp-medium) {
+        left: 5%;
+      }
+      @media only screen and (max-width: $bp-small) {
+        left: -2%;
+      }
     }
   }
   &__none {
@@ -151,7 +167,7 @@
       @media only screen and (max-width: $bp-small) {
         grid-column: 2 / 3;
         grid-row: 4 / 5;
-        justify-self: center;
+        justify-self: stretch;
       }
 
       justify-self: center;
@@ -181,6 +197,7 @@
         grid-column: 2 / 3;
         grid-row: 5 / 6;
         justify-self: center;
+        padding: 0.75rem 5.5rem;
       }
 
       justify-self: center;
